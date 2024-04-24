@@ -1,0 +1,40 @@
+{
+  "name": "eslint-config-parsian",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "index.js",
+  "author": "Paratco",
+  "license": "ISC",
+  "description": "Paratco ESLint Config",
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "react",
+    "lint"
+  ],
+  "scripts": {
+    "lint": "eslint . --report-unused-disable-directives-severity error --max-warnings 0",
+    "format": "prettier --write src/"
+  },
+  "peerDependencies": {
+    "@eslint/js": "^9.1.1",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "prettier": "^3.2.5",
+    "typescript-eslint": "^7.7.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.1.1",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.7.1"
+  }
+}
