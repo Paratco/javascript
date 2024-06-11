@@ -1,6 +1,9 @@
+import globals from "globals";
 import eslint from "@eslint/js";
 import tseslint from "typescript-eslint";
-import globals from "globals";
+
+// Fix plugins compatibility with ESLint 9.x
+import { fixupPluginRules } from "@eslint/compat";
 
 // Plugins
 import react from "eslint-plugin-react";
@@ -12,24 +15,21 @@ import eslintConfigPrettier from "eslint-config-prettier";
 import typescriptRules from "./lints/typescript/index.js";
 import reactRules from "./lints/react/index.js";
 
-export default tseslint.config(
+export default [
+  // Set predefined configs
   eslint.configs.recommended,
   ...tseslint.configs.strictTypeChecked,
   ...tseslint.configs.stylisticTypeChecked,
 
+  // Browser Only
+  { languageOptions: { globals: globals.browser } },
+
+  // Enable JSX
+  { files: ["**/*.tsx"], languageOptions: { parserOptions: { ecmaFeatures: { jsx: true } } } },
+
   // TypeScript Rules
   {
     files: ["**/*.{ts,tsx}"],
-    languageOptions: {
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        }
-      },
-      globals: {
-        ...globals.browser
-      }
-    },
     rules: {
       ...typescriptRules
     }
@@ -39,7 +39,7 @@ export default tseslint.config(
   {
     files: ["**/*.{js,jsx,mjs,cjs,ts,tsx}"],
     plugins: {
-      react: react,
+      react: fixupPluginRules(react),
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh
     },
@@ -69,7 +69,7 @@ export default tseslint.config(
       "react-hooks/exhaustive-deps": ["error"],
 
       // React Refresh
-      "react-refresh/only-export-components": ["warn", { "allowConstantExport": true }]
+      "react-refresh/only-export-components": ["warn", { allowConstantExport: true }]
     }
   },
 
@@ -78,4 +78,4 @@ export default tseslint.config(
   },
 
   eslintConfigPrettier
-);
+];
