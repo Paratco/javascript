@@ -1,6 +1,6 @@
 {
   "name": "@paratco/eslint-config",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "type": "module",
   "main": "index.js",
   "author": "Paratco",
@@ -11,6 +11,8 @@
     "eslint",
     "eslint-config",
     "react",
+    "node",
+    "node.js",
     "lint"
   ],
   "scripts": {
@@ -18,47 +20,18 @@
     "format": "prettier --write src/"
   },
   "peerDependencies": {
+    "eslint": "^9.4.0",
+    "prettier": "^3.3.2",
+    "typescript-eslint": "^7.13.0"
+  },
+  "dependencies": {
     "@eslint/compat": "^1.0.3",
     "@eslint/js": "^9.4.0",
     "@types/eslint__js": "^8.42.3",
-    "eslint": "^9.4.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react": "^7.34.2",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
-    "globals": "^15.4.0",
-    "prettier": "^3.3.2",
-    "typescript-eslint": "^7.13.0"
-  },
-  "peerDependenciesMeta": {
-    "@eslint/compat": {
-      "optional": true
-    },
-    "eslint-plugin-react": {
-      "optional": true
-    },
-    "eslint-plugin-react-hooks": {
-      "optional": true
-    },
-    "eslint-plugin-react-refresh": {
-      "optional": true
-    },
-    "globals": {
-      "optional": true
-    }
-  },
-  "devDependencies": {
-    "@eslint/compat": "^1.0.3",
-    "@eslint/js": "^9.4.0",
-    "@types/eslint__js": "^8.42.3",
-    "eslint": "^9.4.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-react": "^7.34.2",
-    "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-plugin-react-refresh": "^0.4.7",
-    "globals": "^15.4.0",
-    "prettier": "^3.3.2",
-    "typescript": "^5.4.5",
-    "typescript-eslint": "^7.13.0"
+    "globals": "^15.4.0"
   }
 }

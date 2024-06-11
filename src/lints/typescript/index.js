@@ -15,7 +15,7 @@ export default {
   // https://typescript-eslint.io/rules/consistent-return/
   // Note: you must disable the base rule as it can report incorrect errors
   "consistent-return": "off",
-  "@typescript-eslint/consistent-return": ["error"],
+  "@typescript-eslint/consistent-return": "off",
 
   // Enforce consistent usage of type exports.
   // https://typescript-eslint.io/rules/consistent-type-exports
@@ -50,8 +50,9 @@ export default {
   "@typescript-eslint/explicit-member-accessibility": [
     "error",
     {
-      "overrides": {
-        "constructors": "off"
+      accessibility: "no-public",
+      overrides: {
+        constructors: "off"
       }
     }
   ],
@@ -76,7 +77,7 @@ export default {
   // https://typescript-eslint.io/rules/member-ordering
   "@typescript-eslint/member-ordering": [
     "error",
-    { "default": ["constructor", "field", "static-method", "method", "signature"] }
+    { default: ["constructor", "field", "static-method", "method", "signature"] }
   ],
 
   // Enforce using a particular method signature syntax.
@@ -233,5 +234,18 @@ export default {
 
   // Require type annotations in certain places.
   // https://typescript-eslint.io/rules/typedef
-  "@typescript-eslint/typedef": ["off"]
+  "@typescript-eslint/typedef": ["off"],
+
+  // Enforce template literal expressions to be of string type.
+  // https://typescript-eslint.io/rules/restrict-template-expressions
+  rules: {
+    "@typescript-eslint/restrict-template-expressions": [
+      "error",
+      {
+        allowBoolean: true,
+        allowNumber: true,
+        allowRegExp: true
+      }
+    ]
+  }
 };

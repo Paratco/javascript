@@ -1,4 +1,5 @@
 import globals from "globals";
+import baseConfig from "./base.js";
 
 // Fix plugins compatibility with ESLint 9.x
 import { fixupPluginRules } from "@eslint/compat";
@@ -12,6 +13,8 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import reactRules from "../lints/react/index.js";
 
 export default [
+  ...baseConfig,
+
   // Browser Only
   { languageOptions: { globals: globals.browser } },
 

@@ -16,9 +16,7 @@ export default [
   // TypeScript Rules
   {
     files: ["**/*.{ts,tsx}"],
-    rules: {
-      ...typescriptRules
-    }
+    rules: typescriptRules
   },
 
   eslintConfigPrettier
