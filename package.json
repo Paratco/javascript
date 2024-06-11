@@ -1,6 +1,6 @@
 {
   "name": "@paratco/eslint-config",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "type": "module",
   "main": "index.js",
   "author": "Paratco",
@@ -28,6 +28,23 @@
     "globals": "^15.4.0",
     "prettier": "^3.3.2",
     "typescript-eslint": "^7.13.0"
+  },
+  "peerDependenciesMeta": {
+    "@eslint/compat": {
+      "optional": true
+    },
+    "eslint-plugin-react": {
+      "optional": true
+    },
+    "eslint-plugin-react-hooks": {
+      "optional": true
+    },
+    "eslint-plugin-react-refresh": {
+      "optional": true
+    },
+    "globals": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@eslint/compat": "^1.0.3",
