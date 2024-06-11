@@ -1,0 +1,20 @@
+{
+  "name": "@paratco/prettier-config",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "index.json",
+  "author": "Paratco",
+  "license": "ISC",
+  "description": "Paratco Prettier Config",
+  "repository": "git@github.com/Paratco/javascript.git",
+  "keywords": [
+    "prettier",
+    "prettier-config"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "prettier": "^3.3.2"
+  }
+}
