@@ -1,4 +1,4 @@
-# `eslint-plugin-react`
+# `@paratco/eslint-config`
 
 Paratco ESLint configs
 
