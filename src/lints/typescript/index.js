@@ -238,14 +238,12 @@ export default {
 
   // Enforce template literal expressions to be of string type.
   // https://typescript-eslint.io/rules/restrict-template-expressions
-  rules: {
-    "@typescript-eslint/restrict-template-expressions": [
-      "error",
-      {
-        allowBoolean: true,
-        allowNumber: true,
-        allowRegExp: true
-      }
-    ]
-  }
+  "@typescript-eslint/restrict-template-expressions": [
+    "error",
+    {
+      allowBoolean: true,
+      allowNumber: true,
+      allowRegExp: true
+    }
+  ]
 };
