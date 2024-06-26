@@ -1,9 +1,6 @@
 import globals from "globals";
 import baseConfig from "./base.js";
 
-// Fix plugins compatibility with ESLint 9.x
-import { fixupPluginRules } from "@eslint/compat";
-
 // Plugins
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -25,9 +22,9 @@ export default [
   {
     files: ["**/*.{js,jsx,mjs,cjs,ts,tsx}"],
     plugins: {
-      react: fixupPluginRules(react),
-      "react-hooks": fixupPluginRules(reactHooks),
-      "react-refresh": fixupPluginRules(reactRefresh)
+      react: react,
+      "react-hooks": reactHooks,
+      "react-refresh": reactRefresh
     },
     settings: {
       react: {
