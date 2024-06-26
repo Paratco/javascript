@@ -26,8 +26,8 @@ export default [
     files: ["**/*.{js,jsx,mjs,cjs,ts,tsx}"],
     plugins: {
       react: fixupPluginRules(react),
-      "react-hooks": reactHooks,
-      "react-refresh": reactRefresh
+      "react-hooks": fixupPluginRules(reactHooks),
+      "react-refresh": fixupPluginRules(reactRefresh)
     },
     settings: {
       react: {
