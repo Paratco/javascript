@@ -1,9 +1,6 @@
 import eslint from "@eslint/js";
 import tseslint from "typescript-eslint";
 
-// Plugins
-import eslintConfigPrettier from "eslint-config-prettier";
-
 // Custom Rules
 import typescriptRules from "../lints/typescript/index.js";
 
@@ -17,7 +14,5 @@ export default [
   {
     files: ["**/*.{ts,tsx}"],
     rules: typescriptRules
-  },
-
-  eslintConfigPrettier
+  }
 ];
