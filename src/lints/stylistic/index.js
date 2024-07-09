@@ -1,5 +1,4 @@
 export default {
-
   // https://eslint.style/rules/default/array-bracket-newline
   // Enforce linebreaks after opening and before closing array brackets
   "@stylistic/array-bracket-newline": ["warn"],
@@ -118,7 +117,7 @@ export default {
 
   // https://eslint.style/rules/default/jsx-indent
   // Enforce JSX indentation
-  "@stylistic/jsx-indent": ["warn", {checkAttributes: true, indentLogicalExpressions: true}],
+  "@stylistic/jsx-indent": ["warn", 2, { checkAttributes: true, indentLogicalExpressions: true }],
 
   // https://eslint.style/rules/default/jsx-indent-props
   // Enforce props indentation in JSX
@@ -154,16 +153,19 @@ export default {
 
   // https://eslint.style/rules/default/jsx-sort-props
   // Enforce props alphabetical sorting
-  "@stylistic/jsx-sort-props": ["warn", {
-    callbacksLast: true,
-    shorthandFirst: true,
-    // shorthandLast: false,
-    multiline: "last",
-    // ignoreCase: false,
-    noSortAlphabetically: true,
-    // reservedFirst: true
-    // locale: "auto"
-  }],
+  "@stylistic/jsx-sort-props": [
+    "warn",
+    {
+      callbacksLast: true,
+      shorthandFirst: true,
+      // shorthandLast: false,
+      multiline: "last",
+      // ignoreCase: false,
+      noSortAlphabetically: true
+      // reservedFirst: true
+      // locale: "auto"
+    }
+  ],
 
   // https://eslint.style/rules/default/jsx-tag-spacing
   // Enforce whitespace in and around the JSX opening and closing brackets
