@@ -11,7 +11,7 @@ export default [
     flat: true,
     blockSpacing: true,
     braceStyle: "stroustrup",
-    commaDangle: "always-multiline",
+    commaDangle: "never",
     indent: 2,
     semi: true,
     quotes: "double",
