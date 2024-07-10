@@ -347,7 +347,7 @@ export default {
   "@stylistic/object-curly-newline": [
     "warn",
     {
-      multiline: true
+      consistent: true
     }
   ],
 

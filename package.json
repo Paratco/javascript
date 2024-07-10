@@ -1,6 +1,6 @@
 {
   "name": "@paratco/eslint-config",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "type": "module",
   "main": "index.js",
   "author": "Paratco",
