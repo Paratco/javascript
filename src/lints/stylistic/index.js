@@ -258,7 +258,17 @@ export default {
 
   // https://eslint.style/rules/default/max-len
   // Enforce a maximum line length
-  "@stylistic/max-len": ["error", { code: 120 }],
+  "@stylistic/max-len": [
+    "error",
+    {
+      code: 120,
+      tabWidth: 2,
+      ignoreUrls: true,
+      ignoreStrings: true,
+      ignoreTemplateLiterals: true,
+      ignoreRegExpLiterals: true
+    }
+  ],
 
   // https://eslint.style/rules/default/max-statements-per-line
   // Enforce a maximum number of statements allowed per line
@@ -347,7 +357,12 @@ export default {
 
   // https://eslint.style/rules/default/object-property-newline
   // Enforce placing object properties on separate lines
-  "@stylistic/object-property-newline": ["warn"],
+  "@stylistic/object-property-newline": [
+    "warn",
+    {
+      allowAllPropertiesOnSameLine: true
+    }
+  ],
 
   // https://eslint.style/rules/default/one-var-declaration-per-line
   // Require or disallow newlines around variable declarations
