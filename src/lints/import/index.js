@@ -127,7 +127,19 @@ export default {
 
   // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-anonymous-default-export.md
   // Forbid anonymous values as default exports.
-  "import/no-anonymous-default-export": ["error"],
+  "import/no-anonymous-default-export": [
+    "error",
+    {
+      allowArray: false,
+      allowArrowFunction: true,
+      allowAnonymousClass: false,
+      allowAnonymousFunction: false,
+      allowCallExpression: true, // The true value here is for backward compatibility
+      allowNew: false,
+      allowLiteral: false,
+      allowObject: false
+    }
+  ],
 
   // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-default-export.md
   // Forbid default exports.
