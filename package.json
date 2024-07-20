@@ -1,6 +1,6 @@
 {
   "name": "@paratco/eslint-config",
-  "version": "0.7.3",
+  "version": "0.7.4",
   "type": "module",
   "main": "index.js",
   "author": "Paratco",
@@ -21,8 +21,10 @@
   },
   "peerDependencies": {
     "eslint": "^8.57.0",
-    "prettier": "^3.3.2",
     "typescript-eslint": "^7.16.0"
+  },
+  "optionalDependencies": {
+    "prettier": "^3.3.2"
   },
   "dependencies": {
     "@eslint/js": "^9.6.0",

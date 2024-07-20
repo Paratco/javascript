@@ -1,6 +1,5 @@
 import globals from "globals";
 import baseConfig from "./base.js";
-import importConfig from "./import.js";
 
 // Plugins
 import react from "eslint-plugin-react";
@@ -12,7 +11,6 @@ import reactRules from "../lints/react/index.js";
 
 export default [
   ...baseConfig,
-  ...importConfig,
 
   // Browser Only
   { languageOptions: { globals: globals.browser } },
