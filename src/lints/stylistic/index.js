@@ -263,6 +263,10 @@ export default {
     {
       code: 120,
       tabWidth: 2,
+      comments: 120,
+      ignorePattern: true,
+      ignoreComments: true,
+      ignoreTrailingComments: true,
       ignoreUrls: true,
       ignoreStrings: true,
       ignoreTemplateLiterals: true,
