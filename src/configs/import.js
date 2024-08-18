@@ -1,25 +1,25 @@
-import eslintPluginImport from "eslint-plugin-import";
+import eslintPluginImportX from "eslint-plugin-import-x";
 
 // Custom Rules
-import importRules from "../lints/import/index.js";
+import importXRules from "../lints/import/index.js";
 
 export default [
   // ESLint Plugin Import
   {
     files: ["**/*.{js,jsx,mjs,cjs,ts,tsx}"],
     plugins: {
-      import: eslintPluginImport
+      importX: eslintPluginImportX
     },
     settings: {
-      "import/resolver": {
+      "import-x/resolver": {
         typescript: {
           alwaysTryTypes: true
         }
       }
     },
     rules: {
-      ...eslintPluginImport.configs.recommended.rules,
-      ...importRules
+      ...eslintPluginImportX.configs.recommended.rules,
+      ...importXRules
     }
   }
 ];
