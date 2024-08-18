@@ -1,14 +1,21 @@
 import eslint from "@eslint/js";
-import tseslint from "typescript-eslint";
+import tsEslint from "typescript-eslint";
 
 // Custom Rules
+import javascriptRules from "../lints/javascript/index.js";
 import typescriptRules from "../lints/typescript/index.js";
 
 export default [
   // Set predefined configs
   eslint.configs.recommended,
-  ...tseslint.configs.strictTypeChecked,
-  ...tseslint.configs.stylisticTypeChecked,
+  ...tsEslint.configs.strictTypeChecked,
+  ...tsEslint.configs.stylisticTypeChecked,
+
+  // JavaScript Rules
+  {
+    files: ["**/*.{js,jsx,mjs,cjs}"],
+    rules: javascriptRules
+  },
 
   // TypeScript Rules
   {
