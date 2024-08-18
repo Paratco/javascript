@@ -131,7 +131,8 @@ export default {
 
   // Disallow invocation of require().
   // https://typescript-eslint.io/rules/no-require-imports
-  "@typescript-eslint/no-require-imports": ["error"],
+  // Added to recommended
+  // "@typescript-eslint/no-require-imports": ["error"],
 
   // Disallow specified modules when loaded by import.
   // https://typescript-eslint.io/rules/no-restricted-imports
@@ -139,11 +140,19 @@ export default {
   "no-restricted-imports": "off",
   "@typescript-eslint/no-restricted-imports": ["off"],
 
+  // Disallow certain types
+  // https://typescript-eslint.io/rules/no-restricted-types/
+  // "@typescript-eslint/no-restricted-types": ["off"],
+
   // Disallow variable declarations from shadowing variables declared in the outer scope.
   // https://typescript-eslint.io/rules/no-shadow
   // Note: you must disable the base rule as it can report incorrect errors
   "no-shadow": "off",
   "@typescript-eslint/no-shadow": ["error"],
+
+  // https://typescript-eslint.io/rules/no-unnecessary-parameter-property-assignment/
+  // Disallow unnecessary assignment of constructor property parameter
+  "@typescript-eslint/no-unnecessary-parameter-property-assignment": ["off"],
 
   // Disallow unnecessary namespace qualifiers.
   // https://typescript-eslint.io/rules/no-unnecessary-qualifier
@@ -151,13 +160,15 @@ export default {
 
   // Require unary negation to take a number.
   // https://typescript-eslint.io/rules/no-unsafe-unary-minus
-  "@typescript-eslint/no-unsafe-unary-minus": ["error"],
+  // Added to recommended
+  // "@typescript-eslint/no-unsafe-unary-minus": ["error"],
 
   // Disallow unused expressions.
   // https://typescript-eslint.io/rules/no-unused-expressions
   // Note: you must disable the base rule as it can report incorrect errors
-  "no-unused-expressions": "off",
-  "@typescript-eslint/no-unused-expressions": ["off"],
+  // Added to recommended
+  // "no-unused-expressions": "off",
+  // "@typescript-eslint/no-unused-expressions": ["off"],
 
   // Disallow the use of variables before they are defined.
   // https://typescript-eslint.io/rules/no-use-before-define
@@ -185,7 +196,8 @@ export default {
 
   // Enforce the use of Array.prototype.find() over Array.prototype.filter() followed by [0] when looking for a single result.
   // https://typescript-eslint.io/rules/prefer-find
-  "@typescript-eslint/prefer-find": ["warn"],
+  // Added to stylistic
+  // "@typescript-eslint/prefer-find": ["warn"],
 
   // Require private members to be marked as readonly if they're never modified outside the constructor.
   // https://typescript-eslint.io/rules/prefer-readonly
@@ -197,7 +209,8 @@ export default {
 
   // Enforce RegExp#exec over String#match if no global flag is provided.
   // https://typescript-eslint.io/rules/prefer-regexp-exec
-  "@typescript-eslint/prefer-regexp-exec": ["warn"],
+  // Added to stylistic
+  // "@typescript-eslint/prefer-regexp-exec": ["warn"],
 
   // Require any function or method that returns a Promise to be marked async.
   // https://typescript-eslint.io/rules/promise-function-async
@@ -210,12 +223,9 @@ export default {
   // Enforce consistent returning of awaited values.
   // https://typescript-eslint.io/rules/return-await
   // Note: you must disable the base rule as it can report incorrect errors
-  "no-return-await": "off",
-  "@typescript-eslint/return-await": ["off"],
-
-  // Enforce constituents of a type union/intersection to be sorted alphabetically.
-  // https://typescript-eslint.io/rules/sort-type-constituents
-  "@typescript-eslint/sort-type-constituents": ["warn"],
+  // Added to recommended
+  // "no-return-await": "off",
+  // "@typescript-eslint/return-await": ["off"],
 
   // Disallow certain types in boolean expressions.
   // https://typescript-eslint.io/rules/strict-boolean-expressions

@@ -97,7 +97,7 @@ export default {
 
   // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/dynamic-import-chunkname.md
   // Enforce a leading comment with the webpackChunkName for dynamic imports.
-  "import/dynamic-import-chunkname": ["error"],
+  "import/dynamic-import-chunkname": ["off"],
 
   // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/exports-last.md
   // Ensure all exports appear after other statements.

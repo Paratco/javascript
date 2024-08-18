@@ -198,6 +198,10 @@ export default {
   // Use similar stylistic rule instead
   "react/jsx-props-no-multi-spaces": ["off"],
 
+  // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-spread-multi.md
+  // Disallow multiple spaces between inline JSX props
+  "react/jsx-props-no-spread-multi": ["off"],
+
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-spreading.md
   // Disallow JSX prop spreading
   "react/jsx-props-no-spreading": ["off"],
