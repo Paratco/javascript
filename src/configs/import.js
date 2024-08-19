@@ -8,7 +8,7 @@ export default [
   {
     files: ["**/*.{js,jsx,mjs,cjs,ts,tsx}"],
     plugins: {
-      importX: eslintPluginImportX
+      "import-x": eslintPluginImportX
     },
     settings: {
       "import-x/resolver": {
