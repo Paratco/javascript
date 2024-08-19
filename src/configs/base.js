@@ -13,7 +13,7 @@ export default [
 
   // JavaScript Rules
   {
-    files: ["**/*.{js,jsx,mjs,cjs}"],
+    files: ["**/*.{js,jsx,mjs,cjs,ts,tsx}"],
     rules: javascriptRules
   },
 
