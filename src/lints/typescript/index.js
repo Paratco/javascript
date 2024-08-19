@@ -255,5 +255,10 @@ export default {
       allowNumber: true,
       allowRegExp: true
     }
-  ]
+  ],
+
+  // Disallow type parameters that aren't used multiple times
+  // https://typescript-eslint.io/rules/no-unnecessary-type-parameters
+  // Note: This rule is in the strict rules. But we decided to disable this rule.
+  "@typescript-eslint/no-unnecessary-type-parameters": ["off"]
 };
