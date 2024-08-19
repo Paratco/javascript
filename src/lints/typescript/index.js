@@ -260,5 +260,21 @@ export default {
   // Disallow type parameters that aren't used multiple times
   // https://typescript-eslint.io/rules/no-unnecessary-type-parameters
   // Note: This rule is in the strict rules. But we decided to disable this rule.
-  "@typescript-eslint/no-unnecessary-type-parameters": ["off"]
+  "@typescript-eslint/no-unnecessary-type-parameters": ["off"],
+
+  // Disallow unused variables.
+  // https://typescript-eslint.io/rules/no-unused-vars
+  // Note: This rule is in the recommended rules. But we modify it.
+  "@typescript-eslint/no-unused-vars": [
+    "error",
+    {
+      args: "all",
+      argsIgnorePattern: "^_",
+      caughtErrors: "all",
+      caughtErrorsIgnorePattern: "^_",
+      destructuredArrayIgnorePattern: "^_",
+      varsIgnorePattern: "^_",
+      ignoreRestSiblings: true
+    }
+  ]
 };
