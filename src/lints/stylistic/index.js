@@ -284,7 +284,7 @@ export default {
 
   // https://eslint.style/rules/default/multiline-comment-style
   // Enforce a particular style for multiline comments
-  "@stylistic/multiline-comment-style": ["warn"],
+  "@stylistic/multiline-comment-style": ["off"],
 
   // https://eslint.style/rules/default/multiline-ternary
   // Enforce newlines between operands of ternary expressions

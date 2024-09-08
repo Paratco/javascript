@@ -18,6 +18,10 @@ export default {
   // Forbid the use of mutable exports with var or let.
   "import-x/no-mutable-exports": ["error"],
 
+  // https://github.com/un-ts/eslint-plugin-import-x/blob/HEAD/docs/rules/no-rename-default.md
+  // Prohibit importing a default export by another name.
+  "import-x/no-rename-default": ["off"],
+
   // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-unused-modules.md
   // Forbid modules without exports, or exports without matching import in another module.
   // TODO: Can be enabled
