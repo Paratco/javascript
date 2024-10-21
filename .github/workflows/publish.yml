@@ -1,4 +1,4 @@
-name: Build And Publish To NPM
+name: Publish To NPM
 
 on:
   release:
@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     runs-on:
-      - linux
+      - ubuntu-latest
 
     steps:
       - name: Check out the repo
