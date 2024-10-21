@@ -98,8 +98,8 @@ export default {
   // Disallow duplicate class members.
   // https://typescript-eslint.io/rules/no-dupe-class-members
   // Note: you must disable the base rule as it can report incorrect errors
-  "no-dupe-class-members": "error",
-  "@typescript-eslint/no-dupe-class-members": ["error"],
+  "no-dupe-class-members": "off",
+  "@typescript-eslint/no-dupe-class-members": ["off"],
 
   // Enforce the use of top-level import type qualifier when an import only has specifiers with inline type qualifiers.
   // https://typescript-eslint.io/rules/no-import-type-side-effects
