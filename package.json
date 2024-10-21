@@ -6,7 +6,10 @@
   "author": "Paratco",
   "license": "ISC",
   "description": "Paratco ESLint Config",
-  "repository": "git@github.com/Paratco/javascript.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Paratco/javascript.git"
+  },
   "keywords": [
     "eslint",
     "eslint-config",
