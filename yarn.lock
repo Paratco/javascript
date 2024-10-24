@@ -911,11 +911,11 @@ __metadata:
   linkType: hard
 
 "eslint-plugin-react-hooks@npm:canary":
-  version: 5.1.0-rc-65a56d0e-20241020
-  resolution: "eslint-plugin-react-hooks@npm:5.1.0-rc-65a56d0e-20241020"
+  version: 5.1.0-rc-1631855f-20241023
+  resolution: "eslint-plugin-react-hooks@npm:5.1.0-rc-1631855f-20241023"
   peerDependencies:
     eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0
-  checksum: 10c0/60237b308017e62811b017a202c9cf7cce5dd296cac8ce6f48e6b018507ff457dd2a6136a7b0c03e78d8785e45b7f81dca4f3de6ee7dea7a6b3da100a54151df
+  checksum: 10c0/2df1ea79b0d6e94b3363846febab1c97977899cdad44af294a6dce3be370d80e2ed29f4ec41a02ad577be825f4fce1a013d92b4a39a469c1cfb330bbe3848bcd
   languageName: node
   linkType: hard
 
