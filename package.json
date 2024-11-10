@@ -38,7 +38,7 @@
     "eslint-import-resolver-typescript": "^3.6.3",
     "eslint-plugin-import-x": "^4.4.0",
     "eslint-plugin-react": "^7.37.2",
-    "eslint-plugin-react-hooks": "5.1.0-rc-5c56b873-20241107",
+    "eslint-plugin-react-hooks": "5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.12.0",
     "typescript-eslint": "^8.13.0"
