@@ -276,5 +276,10 @@ export default {
       varsIgnorePattern: "^_",
       ignoreRestSiblings: true
     }
-  ]
+  ],
+
+  // Enforce using concise optional chain expressions instead of chained logical ands, negated logical ors, or empty objects
+  // https://typescript-eslint.io/rules/prefer-optional-chain
+  // Note: This rule is in the recommended rules. But we remove it.
+  "@typescript-eslint/prefer-optional-chain": ["off"],
 };
