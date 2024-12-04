@@ -165,7 +165,7 @@ __metadata:
     eslint-import-resolver-typescript: "npm:^3.7.0"
     eslint-plugin-import-x: "npm:^4.5.0"
     eslint-plugin-react: "npm:^7.37.2"
-    eslint-plugin-react-hooks: "npm:5.1.0-rc-1b1283ad-20241203"
+    eslint-plugin-react-hooks: "npm:5.1.0-rc.1"
     eslint-plugin-react-refresh: "npm:^0.4.16"
     globals: "npm:^15.13.0"
     prettier: "npm:^3.4.2"
@@ -912,12 +912,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-react-hooks@npm:5.1.0-rc-1b1283ad-20241203":
-  version: 5.1.0-rc-1b1283ad-20241203
-  resolution: "eslint-plugin-react-hooks@npm:5.1.0-rc-1b1283ad-20241203"
+"eslint-plugin-react-hooks@npm:5.1.0-rc.1":
+  version: 5.1.0-rc.1
+  resolution: "eslint-plugin-react-hooks@npm:5.1.0-rc.1"
   peerDependencies:
     eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0
-  checksum: 10c0/db83ce64c20e1646474716d471c0f234b07adfefa0a6f9257b44088e084f11731a5985eb719e470558ef1de4426463fecc0d118a4134eece467d559f149b1327
+  checksum: 10c0/3fa2777b6377ec1b73bf9ad21701057b152a09b985f1b2be171f90243b176248de09b89a49d659f74f6ad1c6fed165ba4fe80e4dcc98f256b74323e93dab27da
   languageName: node
   linkType: hard
 
