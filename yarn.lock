@@ -194,6 +194,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/doctrine@npm:^0.0.9":
+  version: 0.0.9
+  resolution: "@types/doctrine@npm:0.0.9"
+  checksum: 10c0/cdaca493f13c321cf0cacd1973efc0ae74569633145d9e6fc1128f32217a6968c33bea1f858275239fe90c98f3be57ec8f452b416a9ff48b8e8c1098b20fa51c
+  languageName: node
+  linkType: hard
+
 "@types/eslint@npm:*":
   version: 9.6.1
   resolution: "@types/eslint@npm:9.6.1"
@@ -946,9 +953,10 @@ __metadata:
   linkType: hard
 
 "eslint-plugin-import-x@npm:^4.5.0":
-  version: 4.5.0
-  resolution: "eslint-plugin-import-x@npm:4.5.0"
+  version: 4.5.1
+  resolution: "eslint-plugin-import-x@npm:4.5.1"
   dependencies:
+    "@types/doctrine": "npm:^0.0.9"
     "@typescript-eslint/scope-manager": "npm:^8.1.0"
     "@typescript-eslint/utils": "npm:^8.1.0"
     debug: "npm:^4.3.4"
@@ -962,7 +970,7 @@ __metadata:
     tslib: "npm:^2.6.3"
   peerDependencies:
     eslint: ^8.57.0 || ^9.0.0
-  checksum: 10c0/ad4cd39d152fcb5f86f659cc3fd66b8a149e14ac784c13509512bf8ae695a36dad7ddaf404769f06348eb6d4b22a38acb40abd09417186c58c3e2b41c95a129d
+  checksum: 10c0/8b674b7ed528e7694c4c51b78a333ec3a464d4c048755387526f1454a05f05ffc61a593aa8a52aaad1b991676be5e77cf6e4aca9d897dc58699d60370d7bd85c
   languageName: node
   linkType: hard
 
