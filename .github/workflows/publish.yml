@@ -46,11 +46,11 @@ jobs:
         run: yarn install
 
       - name: Publish package on NPM
-        run: npm publish --provenance --access public
+        run: npm publish --provenance --access public --auth-type-legacy
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_KEY }}
 
       - name: Publish package on GitHub
-        run: npm publish --provenance --access public --registry https://npm.pkg.github.com/
+        run: npm publish --provenance --access public --auth-type-legacy --registry https://npm.pkg.github.com/
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
