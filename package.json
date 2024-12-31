@@ -18,6 +18,9 @@
     "node.js",
     "lint"
   ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
     "lint": "eslint . --report-unused-disable-directives-severity error --max-warnings 0",
     "format": "prettier --write src/"
