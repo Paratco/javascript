@@ -10,6 +10,7 @@ jobs:
       - ubuntu-latest
 
     permissions:
+      packages: write
       contents: read
       id-token: write
 
@@ -35,9 +36,8 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           check-latest: 'true'
-          registry-url: "https://registry.npmjs.org"
 
       - name: Enable Yarn
         run: corepack enable
@@ -49,3 +49,8 @@ jobs:
         run: npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_KEY }}
+
+      - name: Publish package on GitHub
+        run: npm publish --provenance --access public --registry https://npm.pkg.github.com/
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
