@@ -46,7 +46,7 @@ jobs:
         run: yarn install
 
       - name: Publish package on NPM
-        run: npm publish --provenance --access public --auth-type-legacy
+        run: npm publish --provenance --access public --auth-type-legacy --registry https://registry.npmjs.org/
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_KEY }}
 
