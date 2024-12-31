@@ -25,4 +25,4 @@ jobs:
           registry-url: "https://npm.pkg.github.com/"
 
       - name: Enable Yarn
-        run: ls -l
+        run: ls -la
