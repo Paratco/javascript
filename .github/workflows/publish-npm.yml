@@ -1,4 +1,4 @@
-name: Publish To NPM
+name: Publish Package To NPM
 
 on:
   release:
@@ -46,7 +46,7 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Publish package on NPM
+      - name: Publish
         run: npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_KEY }}
