@@ -138,7 +138,17 @@ export default {
   // https://typescript-eslint.io/rules/no-restricted-imports
   // Note: you must disable the base rule as it can report incorrect errors
   "no-restricted-imports": "off",
-  "@typescript-eslint/no-restricted-imports": ["off"],
+  "@typescript-eslint/no-restricted-imports": [
+    "error",
+    {
+      patterns: [
+        {
+          regex: "(node:)?process",
+          message: "Please dont import node:process."
+        }
+      ]
+    }
+  ],
 
   // Disallow certain types
   // https://typescript-eslint.io/rules/no-restricted-types/
@@ -281,5 +291,5 @@ export default {
   // Enforce using concise optional chain expressions instead of chained logical ands, negated logical ors, or empty objects
   // https://typescript-eslint.io/rules/prefer-optional-chain
   // Note: This rule is in the recommended rules. But we remove it.
-  "@typescript-eslint/prefer-optional-chain": ["off"],
+  "@typescript-eslint/prefer-optional-chain": ["off"]
 };
