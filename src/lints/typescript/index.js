@@ -275,6 +275,7 @@ export default {
   // Disallow unused variables.
   // https://typescript-eslint.io/rules/no-unused-vars
   // Note: This rule is in the recommended rules. But we modify it.
+  "no-unused-vars": ["off"],
   "@typescript-eslint/no-unused-vars": [
     "error",
     {
@@ -283,7 +284,6 @@ export default {
       caughtErrors: "all",
       caughtErrorsIgnorePattern: "^_",
       destructuredArrayIgnorePattern: "^_",
-      varsIgnorePattern: "^_",
       ignoreRestSiblings: true
     }
   ],

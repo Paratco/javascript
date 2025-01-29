@@ -28,12 +28,14 @@ export default [
       "@typescript-eslint/no-unused-vars": ["off"],
       "unused-imports/no-unused-imports": ["error"],
       "unused-imports/no-unused-vars": [
-        "warn",
+        "error",
         {
-          vars: "all",
-          varsIgnorePattern: "^_",
-          args: "after-used",
-          argsIgnorePattern: "^_"
+          args: "all",
+          argsIgnorePattern: "^_",
+          caughtErrors: "all",
+          caughtErrorsIgnorePattern: "^_",
+          destructuredArrayIgnorePattern: "^_",
+          ignoreRestSiblings: true
         }
       ]
     }

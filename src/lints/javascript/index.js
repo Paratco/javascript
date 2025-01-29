@@ -19,5 +19,19 @@ export default {
         }
       ]
     }
+  ],
+
+  // https://eslint.org/docs/latest/rules/no-unused-vars
+  // Disallow unused variables
+  "no-unused-vars": [
+    "error",
+    {
+      args: "all",
+      argsIgnorePattern: "^_",
+      caughtErrors: "all",
+      caughtErrorsIgnorePattern: "^_",
+      destructuredArrayIgnorePattern: "^_",
+      ignoreRestSiblings: true
+    }
   ]
 };
