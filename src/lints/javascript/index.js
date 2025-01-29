@@ -14,7 +14,7 @@ export default {
     {
       patterns: [
         {
-          regex: "(node:)?process",
+          regex: "^(node:)?process$",
           message: "Please dont import node:process."
         }
       ]
