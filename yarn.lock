@@ -181,8 +181,8 @@ __metadata:
     prettier: "npm:^3.5.3"
     typescript-eslint: "npm:^8.26.0"
   peerDependencies:
-    eslint: ^9.19.0
-    typescript-eslint: ^8.22.0
+    eslint: ^9.22.0
+    typescript-eslint: ^8.26.0
   dependenciesMeta:
     prettier:
       optional: true
