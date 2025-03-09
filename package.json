@@ -26,8 +26,8 @@
     "format": "prettier --write src/"
   },
   "peerDependencies": {
-    "eslint": "^9.19.0",
-    "typescript-eslint": "^8.22.0"
+    "eslint": "^9.22.0",
+    "typescript-eslint": "^8.26.0"
   },
   "optionalDependencies": {
     "prettier": "^3.5.3"
