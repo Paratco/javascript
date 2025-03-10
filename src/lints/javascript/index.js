@@ -33,5 +33,14 @@ export default {
       destructuredArrayIgnorePattern: "^_",
       ignoreRestSiblings: true
     }
+  ],
+
+  // https://eslint.org/docs/latest/rules/no-fallthrough
+  // Disallow fallthrough of case statements
+  "no-fallthrough": [
+    "error",
+    {
+      allowEmptyCase: true
+    }
   ]
 };
