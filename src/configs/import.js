@@ -1,26 +1,28 @@
 import eslintPluginImportX from "eslint-plugin-import-x";
+import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
 import unusedImports from "eslint-plugin-unused-imports";
 
 // Custom Rules
 import importXRules from "../lints/import/index.js";
 
 export default [
+  eslintPluginImportX.flatConfigs.recommended,
+  eslintPluginImportX.flatConfigs.typescript,
+
   // ESLint Plugin Import
   {
     files: ["**/*.{js,jsx,mjs,cjs,ts,tsx}"],
     plugins: {
-      "import-x": eslintPluginImportX,
       "unused-imports": unusedImports
     },
     settings: {
-      "import-x/resolver": {
-        typescript: {
+      "import-x/resolver-next": [
+        createTypeScriptImportResolver({
           alwaysTryTypes: true
-        }
-      }
+        })
+      ]
     },
     rules: {
-      ...eslintPluginImportX.configs.recommended.rules,
       ...importXRules,
 
       // unused-imports
