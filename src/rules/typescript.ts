@@ -168,6 +168,10 @@ export default {
   // https://typescript-eslint.io/rules/no-unnecessary-qualifier
   "@typescript-eslint/no-unnecessary-qualifier": ["warn"],
 
+  // Disallow type assertions that narrow a type
+  // https://typescript-eslint.io/rules/no-unsafe-type-assertion/
+  "@typescript-eslint/no-unsafe-type-assertion": ["error"],
+
   // Require unary negation to take a number.
   // https://typescript-eslint.io/rules/no-unsafe-unary-minus
   // Added to recommended
@@ -255,6 +259,8 @@ export default {
   // Require type annotations in certain places.
   // https://typescript-eslint.io/rules/typedef
   "@typescript-eslint/typedef": ["off"],
+
+  // Additional rules (Customize rules that are not in predefined configs)
 
   // Enforce template literal expressions to be of string type.
   // https://typescript-eslint.io/rules/restrict-template-expressions
