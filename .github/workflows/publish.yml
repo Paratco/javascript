@@ -40,11 +40,8 @@ jobs:
           check-latest: 'true'
           registry-url: https://registry.npmjs.org/
 
-      - name: Enable Yarn
-        run: corepack enable
-
       - name: Install dependencies
-        run: yarn install
+        run: npm install
 
       - name: Publish
         run: npm publish --provenance --access public
