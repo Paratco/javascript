@@ -526,4 +526,4 @@ export default {
   // https://eslint.style/rules/default/yield-star-spacing
   // Require or disallow spacing around the `*` in `yield*` expressions
   "@stylistic/yield-star-spacing": ["warn", "after"]
-};
+} as const;

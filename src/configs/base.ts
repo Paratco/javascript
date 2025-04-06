@@ -2,8 +2,8 @@ import eslint from "@eslint/js";
 import tsEslint from "typescript-eslint";
 
 // Custom Rules
-import javascriptRules from "../lints/javascript/index.js";
-import typescriptRules from "../lints/typescript/index.js";
+import javascriptRules from "../rules/javascript.js";
+import typescriptRules from "../rules/typescript.js";
 
 export default [
   // Set predefined configs
@@ -13,7 +13,7 @@ export default [
 
   // JavaScript Rules
   {
-    files: ["**/*.{js,jsx,mjs,cjs,ts,tsx}"],
+    files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
     rules: javascriptRules
   },
 

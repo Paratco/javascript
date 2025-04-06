@@ -1,14 +1,13 @@
 import stylistic from "@stylistic/eslint-plugin";
 
 // Custom Rules
-import stylisticRules from "../lints/stylistic/index.js";
+import stylisticRules from "../rules/stylistic.js";
 
 export default [
   // Stylistic Configs
   stylistic.configs.customize({
     jsx: true,
     arrowParens: true,
-    flat: true,
     blockSpacing: true,
     braceStyle: "stroustrup",
     commaDangle: "never",
@@ -20,7 +19,7 @@ export default [
 
   // Stylistic Rules
   {
-    files: ["**/*.{js,jsx,mjs,cjs,ts,tsx}"],
+    files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
     languageOptions: {
       parserOptions: {
         ecmaFeatures: {

@@ -172,4 +172,4 @@ export default {
   // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/prefer-default-export.md
   // Prefer a default export if module exports a single name or multiple names.
   "import-x/prefer-default-export": ["off"]
-};
+} as const;
