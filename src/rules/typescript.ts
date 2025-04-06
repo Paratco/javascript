@@ -292,4 +292,4 @@ export default {
   // https://typescript-eslint.io/rules/prefer-optional-chain
   // Note: This rule is in the recommended rules. But we remove it.
   "@typescript-eslint/prefer-optional-chain": ["off"]
-};
+} as const;
