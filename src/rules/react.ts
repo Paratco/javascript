@@ -43,6 +43,11 @@ export default {
   // Disallow certain propTypes
   "react/forbid-prop-types": ["error"],
 
+  // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/forward-ref-uses-ref.md
+  // Require all forwardRef components include a ref parameter
+  // It seems that React 19 doesn't require this rule
+  "react/forward-ref-uses-ref": ["off"],
+
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/function-component-definition.md
   // Enforce a specific function type for function components
   "react/function-component-definition": ["warn"],
