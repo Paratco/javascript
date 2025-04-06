@@ -43,6 +43,10 @@ export default {
   // Enforce consistent spacing inside computed property brackets
   "@stylistic/computed-property-spacing": ["warn"],
 
+  // https://eslint.style/rules/default/curly-newline
+  // Enforce consistent line breaks after opening and before closing braces
+  "@stylistic/curly-newline": ["warn", "always"],
+
   // https://eslint.style/rules/default/dot-location
   // Enforce consistent newlines before and after dots
   "@stylistic/dot-location": ["warn", "property"],
