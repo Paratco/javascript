@@ -170,7 +170,7 @@ export default {
 
   // Disallow type assertions that narrow a type
   // https://typescript-eslint.io/rules/no-unsafe-type-assertion/
-  "@typescript-eslint/no-unsafe-type-assertion": ["error"],
+  "@typescript-eslint/no-unsafe-type-assertion": ["off"],
 
   // Require unary negation to take a number.
   // https://typescript-eslint.io/rules/no-unsafe-unary-minus
