@@ -25,5 +25,13 @@ export default {
 
   // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-at.md
   // Prefer .at() method for index access and String#charAt().
-  "unicorn/prefer-at": ["off"]
+  "unicorn/prefer-at": ["off"],
+
+  // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-typeof-undefined.md
+  // Disallow comparing undefined using typeof.
+  "unicorn/no-typeof-undefined": ["off"],
+
+  // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-static-only-class.md
+  // Disallow classes that only have static members.
+  "unicorn/no-static-only-class": ["off"]
 };
