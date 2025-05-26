@@ -27,6 +27,10 @@ export default {
   // Prefer .at() method for index access and String#charAt().
   "unicorn/prefer-at": ["off"],
 
+  // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-ternary.md
+  // Prefer ternary expressions over simple if-else statements.
+  "unicorn/prefer-ternary": ["warn", "only-single-line"],
+
   // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-typeof-undefined.md
   // Disallow comparing undefined using typeof.
   "unicorn/no-typeof-undefined": ["off"],
