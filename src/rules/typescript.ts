@@ -168,6 +168,10 @@ export default {
   // https://typescript-eslint.io/rules/no-unnecessary-qualifier
   "@typescript-eslint/no-unnecessary-qualifier": ["warn"],
 
+  // Disallow conversion idioms when they do not change the type or value of the expression
+  // https://typescript-eslint.io/rules/no-unnecessary-type-conversion/
+  "@typescript-eslint/no-unnecessary-type-conversion": ["warn"],
+
   // Disallow type assertions that narrow a type
   // https://typescript-eslint.io/rules/no-unsafe-type-assertion/
   "@typescript-eslint/no-unsafe-type-assertion": ["off"],
@@ -255,10 +259,6 @@ export default {
   // Require switch-case statements to be exhaustive.
   // https://typescript-eslint.io/rules/switch-exhaustiveness-check
   "@typescript-eslint/switch-exhaustiveness-check": ["error"],
-
-  // Require type annotations in certain places.
-  // https://typescript-eslint.io/rules/typedef
-  "@typescript-eslint/typedef": ["off"],
 
   // Additional rules (Customize rules that are not in predefined configs)
 
