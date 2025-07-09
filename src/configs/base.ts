@@ -10,8 +10,8 @@ import unicornRules from "../rules/unicorn.js";
 export default [
   // Set predefined configs
   eslint.configs.recommended,
-  tsEslint.configs.strictTypeChecked,
-  tsEslint.configs.stylisticTypeChecked,
+  ...tsEslint.configs.strictTypeChecked,
+  ...tsEslint.configs.stylisticTypeChecked,
   eslintPluginUnicorn.configs.recommended,
 
   // JavaScript Rules
