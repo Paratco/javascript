@@ -1,3 +1,5 @@
+import type { Linter } from "eslint";
+
 export default {
   // https://eslint.org/docs/latest/rules/eqeqeq
   // Require the use of === and !==
@@ -43,4 +45,4 @@ export default {
       allowEmptyCase: true
     }
   ]
-} as const;
+} as const satisfies Linter.RulesRecord;

@@ -1,3 +1,5 @@
+import type { Linter } from "eslint";
+
 export default {
   // Enforce that class methods utilize this.
   // https://typescript-eslint.io/rules/class-methods-use-this
@@ -298,4 +300,4 @@ export default {
   // https://typescript-eslint.io/rules/prefer-optional-chain
   // Note: This rule is in the recommended rules. But we remove it.
   "@typescript-eslint/prefer-optional-chain": ["off"]
-} as const;
+} as const satisfies Linter.RulesRecord;

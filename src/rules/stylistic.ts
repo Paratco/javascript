@@ -1,3 +1,5 @@
+import type { Linter } from "eslint";
+
 export default {
   // https://eslint.style/rules/default/array-bracket-newline
   // Enforce linebreaks after opening and before closing array brackets
@@ -100,7 +102,7 @@ export default {
   "@stylistic/jsx-curly-brace-presence": ["warn"],
 
   // https://eslint.style/rules/default/jsx-curly-newline
-  // 	Enforce consistent linebreaks in curly braces in JSX attributes and expressions
+  // Enforce consistent linebreaks in curly braces in JSX attributes and expressions
   "@stylistic/jsx-curly-newline": ["warn"],
 
   // https://eslint.style/rules/default/jsx-curly-spacing
@@ -118,10 +120,6 @@ export default {
   // https://eslint.style/rules/default/jsx-function-call-newline
   // Enforce line breaks before and after JSX elements when they are used as arguments to a function.
   "@stylistic/jsx-function-call-newline": ["warn"],
-
-  // https://eslint.style/rules/default/jsx-indent
-  // Enforce JSX indentation
-  "@stylistic/jsx-indent": ["warn", 2, { checkAttributes: true, indentLogicalExpressions: true }],
 
   // https://eslint.style/rules/default/jsx-indent-props
   // Enforce props indentation in JSX
@@ -162,10 +160,13 @@ export default {
     {
       callbacksLast: true,
       shorthandFirst: true,
+
       // shorthandLast: false,
       multiline: "last",
+
       // ignoreCase: false,
       noSortAlphabetically: true
+
       // reservedFirst: true
       // locale: "auto"
     }
@@ -268,6 +269,7 @@ export default {
       code: 120,
       tabWidth: 2,
       comments: 120,
+
       // ignorePattern: true,
       ignoreComments: true,
       ignoreTrailingComments: true,
@@ -530,4 +532,4 @@ export default {
   // https://eslint.style/rules/default/yield-star-spacing
   // Require or disallow spacing around the `*` in `yield*` expressions
   "@stylistic/yield-star-spacing": ["warn", "after"]
-} as const;
+} as const satisfies Linter.RulesRecord;

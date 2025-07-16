@@ -1,7 +1,6 @@
 import stylistic from "@stylistic/eslint-plugin";
-
-// Custom Rules
-import stylisticRules from "../rules/stylistic.js";
+import type { Linter } from "eslint";
+import stylisticRules from "../rules/stylistic";
 
 export default [
   // Stylistic Configs
@@ -29,4 +28,4 @@ export default [
     },
     rules: stylisticRules
   }
-];
+] as Linter.Config[];

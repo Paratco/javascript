@@ -1,13 +1,14 @@
-import eslintPluginImportX from "eslint-plugin-import-x";
+import { flatConfigs as importXFlatConfigs } from "eslint-plugin-import-x";
 import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
 import unusedImports from "eslint-plugin-unused-imports";
 
 // Custom Rules
-import importXRules from "../rules/import.js";
+import type { Linter } from "eslint";
+import importXRules from "../rules/import";
 
 export default [
-  eslintPluginImportX.flatConfigs.recommended,
-  eslintPluginImportX.flatConfigs.typescript,
+  importXFlatConfigs.recommended,
+  importXFlatConfigs.typescript,
 
   // ESLint Plugin Import
   {
@@ -42,4 +43,4 @@ export default [
       ]
     }
   }
-];
+] as Linter.Config[];
