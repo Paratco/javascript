@@ -18,6 +18,7 @@ export default [
     files: ["**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}"],
     ...reactPlugin.configs.flat.recommended,
 
+    // todo: remove settings if not needed in react
     // settings: {
     //   react: {
     //     version: "detect"
