@@ -1,4 +1,3 @@
-import oxlint from "eslint-plugin-oxlint";
 import type { Linter } from "eslint";
 import globals from "globals";
 import type { TSESLint } from "@typescript-eslint/utils";
@@ -66,10 +65,6 @@ export function createConfig(opt: Options): Linter.Config[] {
 
   if (opt.ignores !== undefined) {
     config.push({ ignores: opt.ignores });
-  }
-
-  if (opt.useOxc === true) {
-    config.push(...oxlint.configs["flat/all"]);
   }
 
   return config;

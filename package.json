@@ -10,7 +10,6 @@
   "files": [
     "dist"
   ],
-  "bin": "dist/cli.js",
   "exports": {
     ".": {
       "import": "./dist/index.js",
@@ -36,7 +35,7 @@
   "scripts": {
     "lint": "oxlint --max-warnings=0 && eslint --max-warnings=0",
     "lint:fix": "oxlint --fix && eslint --fix",
-    "lint:build": "tsx src/cli.ts",
+    "lint:build": "migrate",
     "build:check": "tsc --noEmit",
     "build": "tsdown",
     "release": "semantic-release",
@@ -45,13 +44,11 @@
   },
   "dependencies": {
     "@eslint/js": "9.31.0",
-    "@oxlint/migrate": "1.7.0",
     "@stylistic/eslint-plugin": "5.2.0",
     "eslint": "9.31.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-import-resolver-typescript": "4.4.4",
     "eslint-plugin-import-x": "4.16.1",
-    "eslint-plugin-oxlint": "1.7.0",
     "eslint-plugin-react": "7.37.5",
     "eslint-plugin-react-hooks": "5.2.0",
     "eslint-plugin-react-refresh": "0.4.20",
@@ -61,6 +58,7 @@
     "typescript-eslint": "8.37.0"
   },
   "devDependencies": {
+    "@oxlint/migrate": "1.7.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.1",
     "@semantic-release/git": "^10.0.1",
@@ -68,11 +66,11 @@
     "@semantic-release/npm": "^12.0.2",
     "@semantic-release/release-notes-generator": "^14.0.3",
     "@types/node": "^22.16.5",
+    "eslint-plugin-oxlint": "1.7.0",
     "jiti": "^2.4.2",
     "oxlint": "1.7.0",
     "semantic-release": "^24.2.7",
     "tsdown": "^0.12.9",
-    "tsx": "^4.20.3",
     "typescript": "~5.8.3"
   },
   "packageManager": "yarn@4.9.2"
