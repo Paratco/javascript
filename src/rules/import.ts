@@ -1,3 +1,5 @@
+import type { Linter } from "eslint";
+
 export default {
   // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-deprecated.md
   // Forbid imported names marked with @deprecated documentation tag.
@@ -138,7 +140,9 @@ export default {
       allowArrowFunction: true,
       allowAnonymousClass: false,
       allowAnonymousFunction: false,
-      allowCallExpression: true, // The true value here is for backward compatibility
+
+      // The true value here is for backward compatibility
+      allowCallExpression: true,
       allowNew: false,
       allowLiteral: false,
       allowObject: false
@@ -172,4 +176,4 @@ export default {
   // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/prefer-default-export.md
   // Prefer a default export if module exports a single name or multiple names.
   "import-x/prefer-default-export": ["off"]
-} as const;
+} as const satisfies Linter.RulesRecord;

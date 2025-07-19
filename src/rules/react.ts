@@ -1,3 +1,5 @@
+import type { Linter } from "eslint";
+
 export default {
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/boolean-prop-naming.md
   // Enforces consistent naming for boolean props
@@ -427,4 +429,4 @@ export default {
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/void-dom-elements-no-children.md
   // Disallow void DOM elements (e.g. <img />, <br />) from receiving children
   "react/void-dom-elements-no-children": ["error"]
-} as const;
+} as const satisfies Linter.RulesRecord;

@@ -3,6 +3,8 @@
 .idea/
 node_modules/
 
+.oxlintrc.json.bak
+
 # Yarn not using Zero-Installs
 .pnp.*
 .yarn/*

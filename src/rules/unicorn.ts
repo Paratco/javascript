@@ -1,3 +1,5 @@
+import type { Linter } from "eslint";
+
 export default {
   // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/filename-case.md
   // Enforce a case style for filenames.
@@ -38,4 +40,4 @@ export default {
   // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-static-only-class.md
   // Disallow classes that only have static members.
   "unicorn/no-static-only-class": ["off"]
-};
+} as const satisfies Linter.RulesRecord;
