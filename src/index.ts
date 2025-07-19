@@ -8,21 +8,7 @@ import reactConfig from "./configs/react";
 import importConfig from "./configs/import";
 import prettierFormatter from "./configs/prettierFormatter";
 import stylisticFormatter from "./configs/stylisticFormatter";
-
-interface TypescriptOptions {
-  tsconfigRootDir?: string;
-  project?: string | string[] | boolean;
-}
-
-interface Options {
-  platform: "node" | "react";
-  style: "stylistic" | "prettier";
-  useImport?: boolean;
-  useOxc?: boolean;
-  overrides?: Linter.Config[];
-  ignores?: string[];
-  typescript?: TypescriptOptions;
-}
+import type { Options, TypescriptOptions } from "./types";
 
 function node(typescript?: TypescriptOptions): TSESLint.FlatConfig.Config["languageOptions"] {
   return {
@@ -69,7 +55,7 @@ export function createConfig(opt: Options): Linter.Config[] {
   }
 
   if (opt.useImport === true) {
-    config.push(...importConfig);
+    config.push(...importConfig(opt.typescript));
   }
 
   config.push(...(opt.style === "stylistic" ? stylisticFormatter : prettierFormatter));

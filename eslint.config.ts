@@ -6,7 +6,7 @@ export default createConfig({
   useImport: true,
   useOxc: true,
   typescript: {
-    project: true,
+    project: "tsconfig.json",
     tsconfigRootDir: "./"
   },
   ignores: ["dist"]
