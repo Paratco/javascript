@@ -1,3 +1,10 @@
+# [3.1.0](https://github.com/Paratco/javascript/compare/3.0.0...3.1.0) (2025-07-21)
+
+
+### Features
+
+* add react version detection ([9f5f792](https://github.com/Paratco/javascript/commit/9f5f792bab0fab13d6b2a17b153b51b040cff346))
+
 # [3.0.0](https://github.com/Paratco/javascript/compare/2.3.1...3.0.0) (2025-07-20)
 
 
