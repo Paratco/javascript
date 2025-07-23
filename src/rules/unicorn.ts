@@ -1,6 +1,15 @@
 import type { Linter } from "eslint";
 
 export default {
+  // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/catch-error-name.md
+  // Enforce a specific parameter name in catch clauses.
+  "unicorn/catch-error-name": [
+    "error",
+    {
+      ignore: [String.raw`^error[\da-zA-Z_]*$`]
+    }
+  ],
+
   // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/filename-case.md
   // Enforce a case style for filenames.
   "unicorn/filename-case": ["off"],
