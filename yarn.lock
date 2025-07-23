@@ -777,7 +777,7 @@ __metadata:
     "@semantic-release/github": "npm:^11.0.3"
     "@semantic-release/npm": "npm:^12.0.2"
     "@semantic-release/release-notes-generator": "npm:^14.0.3"
-    "@stylistic/eslint-plugin": "npm:5.2.0"
+    "@stylistic/eslint-plugin": "npm:5.2.2"
     "@types/node": "npm:^22.16.5"
     eslint: "npm:9.31.0"
     eslint-config-prettier: "npm:10.1.8"
@@ -1154,9 +1154,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@stylistic/eslint-plugin@npm:5.2.0":
-  version: 5.2.0
-  resolution: "@stylistic/eslint-plugin@npm:5.2.0"
+"@stylistic/eslint-plugin@npm:5.2.2":
+  version: 5.2.2
+  resolution: "@stylistic/eslint-plugin@npm:5.2.2"
   dependencies:
     "@eslint-community/eslint-utils": "npm:^4.7.0"
     "@typescript-eslint/types": "npm:^8.37.0"
@@ -1166,7 +1166,7 @@ __metadata:
     picomatch: "npm:^4.0.3"
   peerDependencies:
     eslint: ">=9.0.0"
-  checksum: 10c0/3be1714219c07a926d6c24284597f5816f491495a2e9cc3c6d5f8e13a93fbec396d7f42cbd8097debef10bceb006788edbdb1bd46facc733e5bc3ea69e035a9c
+  checksum: 10c0/00c75290823340d2234d29a56caad0f66117bcc9e9ad0d8b830f19cfeb522fe5e0fb4828d1bf3cc29eda68095682d0c43e6eb8c17cd282a4872f972cf605cdbd
   languageName: node
   linkType: hard
 
