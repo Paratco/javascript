@@ -1,3 +1,10 @@
+## [3.1.1](https://github.com/Paratco/javascript/compare/3.1.0...3.1.1) (2025-07-23)
+
+
+### Bug Fixes
+
+* update unicorn/catch-error-name default ignores ([b60fc67](https://github.com/Paratco/javascript/commit/b60fc6747f0071f9f00451f341a12cb1c24f965f))
+
 # [3.1.0](https://github.com/Paratco/javascript/compare/3.0.0...3.1.0) (2025-07-21)
 
 
