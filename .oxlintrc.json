@@ -393,6 +393,14 @@
         "**/*.{js,mjs,cjs,ts,jsx,tsx}"
       ],
       "rules": {
+        "unicorn/catch-error-name": [
+          "error",
+          {
+            "ignore": [
+              "^error[\\da-zA-Z_]*$"
+            ]
+          }
+        ],
         "unicorn/filename-case": [
           "off"
         ],
