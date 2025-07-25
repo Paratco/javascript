@@ -4,11 +4,12 @@ updates:
   - package-ecosystem: "npm"
     open-pull-requests-limit: 25
     directory: "/"
+    commit-message:
+      prefix: "update"
+      prefix_development: "chore"
+      include_scope: true
+
     schedule:
       interval: "daily"
       time: "04:00"
       timezone: "Asia/Tehran"
-    reviewers:
-      - "Nik96i"
-    assignees:
-      - "Nik96i"
