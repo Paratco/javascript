@@ -1,3 +1,14 @@
+## [3.1.2](https://github.com/Paratco/javascript/compare/3.1.1...3.1.2) (2025-07-25)
+
+### 🐛 Bug Fixes
+
+* fixed semantic release ([14a18df](https://github.com/Paratco/javascript/commit/14a18dff1f22c9bdca4f1ce52992354194c98e7b))
+
+### ⬆️ Dependency Updates
+
+* **deps:** bump @eslint/js from 9.31.0 to 9.32.0 ([34b3bd6](https://github.com/Paratco/javascript/commit/34b3bd695e1714a2f9dffb243bc7afb5753ef26d))
+* **deps:** bump eslint from 9.31.0 to 9.32.0 ([9f41b28](https://github.com/Paratco/javascript/commit/9f41b28b25b9d8cf0bfd361b1c58378f2c9f0b40))
+
 ## [3.1.1](https://github.com/Paratco/javascript/compare/3.1.0...3.1.1) (2025-07-23)
 
 
