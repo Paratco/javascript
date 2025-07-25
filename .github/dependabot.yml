@@ -6,9 +6,8 @@ updates:
     directory: "/"
     commit-message:
       prefix: "update"
-      prefix_development: "chore"
-      include_scope: true
-
+      prefix-development: "chore"
+      include: "scope"
     schedule:
       interval: "daily"
       time: "04:00"
