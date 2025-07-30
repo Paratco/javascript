@@ -58,7 +58,7 @@
     "typescript-eslint": "8.38.0"
   },
   "devDependencies": {
-    "@oxlint/migrate": "1.8.0",
+    "@oxlint/migrate": "1.9.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.1",
     "@semantic-release/git": "^10.0.1",
