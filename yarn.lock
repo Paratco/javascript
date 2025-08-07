@@ -843,9 +843,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oxlint/migrate@npm:1.10.0":
-  version: 1.10.0
-  resolution: "@oxlint/migrate@npm:1.10.0"
+"@oxlint/migrate@npm:1.11.0":
+  version: 1.11.0
+  resolution: "@oxlint/migrate@npm:1.11.0"
   dependencies:
     commander: "npm:^14.0.0"
     oxc-parser: "npm:^0.80.0"
@@ -855,7 +855,7 @@ __metadata:
     jiti: "*"
   bin:
     migrate: dist/bin/oxlint-migrate.mjs
-  checksum: 10c0/9135eefb751728c987a856e7d0809250eaa8e944488cbcc2f409eaa486f9076dc8e5821a70a3ea73f6d6d9d31d38610b9dd149c859d6c97c5a302f399037b029
+  checksum: 10c0/1a72051fa92c63cd518bc1efd7fd73c195d24401c94c747db98ea0327697f93e2b58854e33ec2b700a112e407e25d211496e8fc1214bb08f0951d82f057da851
   languageName: node
   linkType: hard
 
@@ -878,7 +878,7 @@ __metadata:
   resolution: "@paratco/eslint-config@workspace:."
   dependencies:
     "@eslint/js": "npm:9.32.0"
-    "@oxlint/migrate": "npm:1.10.0"
+    "@oxlint/migrate": "npm:1.11.0"
     "@semantic-release/changelog": "npm:^6.0.3"
     "@semantic-release/commit-analyzer": "npm:^13.0.1"
     "@semantic-release/git": "npm:^10.0.1"
