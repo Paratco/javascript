@@ -1,3 +1,9 @@
+## [3.1.3](https://github.com/Paratco/javascript/compare/3.1.2...3.1.3) (2025-08-07)
+
+### ⬆️ Dependency Updates
+
+* **deps:** bump typescript-eslint from 8.38.0 to 8.39.0 ([0decf4d](https://github.com/Paratco/javascript/commit/0decf4d5ff75653cf7a4dac7ba30d8e5bf131629))
+
 ## [3.1.2](https://github.com/Paratco/javascript/compare/3.1.1...3.1.2) (2025-07-25)
 
 ### 🐛 Bug Fixes
