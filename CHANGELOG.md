@@ -1,3 +1,16 @@
+## [3.1.4](https://github.com/Paratco/javascript/compare/3.1.3...3.1.4) (2025-08-12)
+
+### 🐛 Bug Fixes
+
+* change react fragment style ([4b86674](https://github.com/Paratco/javascript/commit/4b86674d0ab74fcdc1887c357e70a5a8c36cdda7))
+
+### ⬆️ Dependency Updates
+
+* **deps:** bump @eslint/js from 9.32.0 to 9.33.0 ([f2e5822](https://github.com/Paratco/javascript/commit/f2e5822465ec05f2503f2eb8263151aef201b294))
+* **deps:** bump @stylistic/eslint-plugin from 5.2.2 to 5.2.3 ([5b38086](https://github.com/Paratco/javascript/commit/5b38086137b99c47bd6402743151fce77fa877c1))
+* **deps:** bump eslint from 9.32.0 to 9.33.0 ([55e38b7](https://github.com/Paratco/javascript/commit/55e38b74db5cc9f5d74a7521cb6a512c6f76689f))
+* **deps:** bump typescript-eslint from 8.39.0 to 8.39.1 ([0571710](https://github.com/Paratco/javascript/commit/05717109a68a9e679f56e3534d1f18cd385462ee))
+
 ## [3.1.3](https://github.com/Paratco/javascript/compare/3.1.2...3.1.3) (2025-08-07)
 
 ### ⬆️ Dependency Updates
