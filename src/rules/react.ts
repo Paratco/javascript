@@ -111,7 +111,7 @@ export default {
 
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-fragments.md
   // Enforce shorthand or standard form for React fragments
-  "react/jsx-fragments": ["warn"],
+  "react/jsx-fragments": ["warn", "element"],
 
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-handler-names.md
   // Enforce event handler naming conventions in JSX
