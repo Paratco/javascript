@@ -927,7 +927,7 @@ __metadata:
     eslint-config-prettier: "npm:10.1.8"
     eslint-import-resolver-typescript: "npm:4.4.4"
     eslint-plugin-import-x: "npm:4.16.1"
-    eslint-plugin-oxlint: "npm:1.11.2"
+    eslint-plugin-oxlint: "npm:1.12.0"
     eslint-plugin-react: "npm:7.37.5"
     eslint-plugin-react-hooks: "npm:5.2.0"
     eslint-plugin-react-refresh: "npm:0.4.20"
@@ -2975,12 +2975,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-oxlint@npm:1.11.2":
-  version: 1.11.2
-  resolution: "eslint-plugin-oxlint@npm:1.11.2"
+"eslint-plugin-oxlint@npm:1.12.0":
+  version: 1.12.0
+  resolution: "eslint-plugin-oxlint@npm:1.12.0"
   dependencies:
     jsonc-parser: "npm:^3.3.1"
-  checksum: 10c0/b8f4b8e9eebf53663c3ccd8e086f25e05b522386d60a62bf3ad9d0889a59227ed2ba07ae516249c8d31c36c05505617a08792fbf708bf15163f1eac8c14ac16c
+  checksum: 10c0/67d6f7d88ced982b5ed1479256614d3d7c98ed4584c1e3069835f02a55a48371d869b829aeb3c1df1ffa78bea3c19e685fc1f93f2ac1a811e11663bdf6d0dab8
   languageName: node
   linkType: hard
 
