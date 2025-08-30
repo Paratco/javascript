@@ -8,7 +8,7 @@ export default createConfig({
   useImport: true,
   typescript: {
     project: "tsconfig.json",
-    tsconfigRootDir: "./"
+    tsconfigRootDir: import.meta.dirname
   },
   overrides: [...oxlint.configs["flat/all"]],
   ignores: ["dist"]
