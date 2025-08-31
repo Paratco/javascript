@@ -13,7 +13,7 @@ export default {
   // Forbid the use of extraneous packages.
   "import-x/no-extraneous-dependencies": [
     "error",
-    { devDependencies: false, optionalDependencies: false, peerDependencies: false }
+    { devDependencies: false, optionalDependencies: false }
   ],
 
   // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-mutable-exports.md

@@ -9,7 +9,7 @@ import importXRules from "../rules/import";
 import type { TypescriptOptions } from "../types";
 
 export default function importConfig(typescript?: TypescriptOptions): Linter.Config[] {
-  const resolverOptions: TypeScriptResolverOptions = { alwaysTryTypes: true };
+  const resolverOptions: TypeScriptResolverOptions = { alwaysTryTypes: true, bun: true };
 
   if (typescript !== undefined) {
     resolverOptions.project = typescript.project;
