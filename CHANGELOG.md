@@ -1,3 +1,20 @@
+## [3.2.0](https://github.com/Paratco/javascript/compare/3.1.4...3.2.0) (2025-08-31)
+
+### 🚀 Features
+
+* added bun to typescript resolver ([5e01944](https://github.com/Paratco/javascript/commit/5e019448b8bc4a0c8d1c8a67e5c9510e5f8a4258))
+
+### 🐛 Bug Fixes
+
+* removed unused-imports/no-unused-vars ([98bbafa](https://github.com/Paratco/javascript/commit/98bbafaa315f89dfc72a6dffee495250917f9cf2))
+
+### ⬆️ Dependency Updates
+
+* **deps:** bump @eslint/js from 9.33.0 to 9.34.0 ([c795ece](https://github.com/Paratco/javascript/commit/c795ece6a5d6dd764018a1d867cbe416e9a2d020))
+* **deps:** bump eslint from 9.33.0 to 9.34.0 ([2b42bc0](https://github.com/Paratco/javascript/commit/2b42bc0fd7caf6b687ae9d8fd4ff1c8526aa3571))
+* **deps:** bump eslint-plugin-unused-imports from 4.1.4 to 4.2.0 ([f722d73](https://github.com/Paratco/javascript/commit/f722d734fd789d9f1be28c2dbefcc253528a7e39))
+* **deps:** bump typescript-eslint from 8.39.1 to 8.41.0 ([f58db24](https://github.com/Paratco/javascript/commit/f58db24ad44654af7c1de3b4f0be5f7b14e9aa6a))
+
 ## [3.1.4](https://github.com/Paratco/javascript/compare/3.1.3...3.1.4) (2025-08-12)
 
 ### 🐛 Bug Fixes
