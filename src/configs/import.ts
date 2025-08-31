@@ -32,20 +32,7 @@ export default function importConfig(typescript?: TypescriptOptions): Linter.Con
         ...importXRules,
 
         // unused-imports
-        "no-unused-vars": ["off"],
-        "@typescript-eslint/no-unused-vars": ["off"],
-        "unused-imports/no-unused-imports": ["error"],
-        "unused-imports/no-unused-vars": [
-          "error",
-          {
-            args: "all",
-            argsIgnorePattern: "^_",
-            caughtErrors: "all",
-            caughtErrorsIgnorePattern: "^_",
-            destructuredArrayIgnorePattern: "^_",
-            ignoreRestSiblings: true
-          }
-        ]
+        "unused-imports/no-unused-imports": ["error"]
       }
     }
   ] as Linter.Config[];
