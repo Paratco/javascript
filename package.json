@@ -58,21 +58,21 @@
     "typescript-eslint": "8.41.0"
   },
   "devDependencies": {
-    "@oxlint/migrate": "1.11.2",
+    "@oxlint/migrate": "1.14.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.1",
     "@semantic-release/git": "^10.0.1",
-    "@semantic-release/github": "^11.0.4",
+    "@semantic-release/github": "^11.0.5",
     "@semantic-release/npm": "^12.0.2",
     "@semantic-release/release-notes-generator": "^14.0.3",
-    "@types/node": "^24.2.1",
+    "@types/node": "^24.3.0",
     "conventional-changelog-conventionalcommits": "^9.1.0",
-    "eslint-plugin-oxlint": "1.11.2",
+    "eslint-plugin-oxlint": "1.14.0",
     "jiti": "^2.5.1",
-    "oxlint": "1.11.2",
+    "oxlint": "1.14.0",
     "semantic-release": "^24.2.7",
-    "tsdown": "^0.14.1",
+    "tsdown": "^0.14.2",
     "typescript": "~5.9.2"
   },
-  "packageManager": "yarn@4.9.2"
+  "packageManager": "yarn@4.9.4"
 }
