@@ -1,3 +1,16 @@
+## [3.2.1](https://github.com/Paratco/javascript/compare/3.2.0...3.2.1) (2025-10-27)
+
+### ⬆️ Dependency Updates
+
+* **deps:** bump @eslint/js from 9.34.0 to 9.38.0 ([f95ebc9](https://github.com/Paratco/javascript/commit/f95ebc995b40029e04e49ffaf8bc427fe1acf07d))
+* **deps:** bump @stylistic/eslint-plugin from 5.2.3 to 5.5.0 ([bac59a6](https://github.com/Paratco/javascript/commit/bac59a6c446d73c465b216fac52161ca826b54d5))
+* **deps:** bump eslint from 9.34.0 to 9.38.0 ([0abe8d8](https://github.com/Paratco/javascript/commit/0abe8d8b633bb824304a43450ea42d1678057187))
+* **deps:** bump eslint-plugin-react-hooks from 5.2.0 to 7.0.1 ([589c18b](https://github.com/Paratco/javascript/commit/589c18b20905ac1f457cf914dfe69a1a35167214))
+* **deps:** bump eslint-plugin-react-refresh from 0.4.20 to 0.4.24 ([4f998d2](https://github.com/Paratco/javascript/commit/4f998d26ce714d3c77f83e08d70d463100590ba3))
+* **deps:** bump eslint-plugin-unicorn from 60.0.0 to 62.0.0 ([7d4dea5](https://github.com/Paratco/javascript/commit/7d4dea5924636a3d35b36e844879a0ce05f019a4))
+* **deps:** bump eslint-plugin-unused-imports from 4.2.0 to 4.3.0 ([55ef970](https://github.com/Paratco/javascript/commit/55ef9705286a873c70c9dfa11a41d1d3db2690d5))
+* **deps:** bump typescript-eslint from 8.41.0 to 8.46.2 ([00ed67e](https://github.com/Paratco/javascript/commit/00ed67e23db65020e41c5f2fe38907a40fc9bf76))
+
 ## [3.2.0](https://github.com/Paratco/javascript/compare/3.1.4...3.2.0) (2025-08-31)
 
 ### 🚀 Features
