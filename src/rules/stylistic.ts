@@ -141,10 +141,6 @@ export default {
   // Enforce PascalCase for user-defined JSX components
   "@stylistic/jsx-pascal-case": ["error"],
 
-  // https://eslint.style/rules/default/jsx-props-no-multi-spaces
-  // Disallow multiple spaces between inline JSX props
-  "@stylistic/jsx-props-no-multi-spaces": ["warn"],
-
   // https://eslint.style/rules/default/jsx-quotes
   // Enforce the consistent use of either double or single quotes in JSX attributes
   "@stylistic/jsx-quotes": ["warn"],
