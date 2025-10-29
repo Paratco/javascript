@@ -10,7 +10,7 @@ import baseConfig from "./base";
 
 export default [
   ...baseConfig,
-  reactHooksConfigs["recommended-latest"],
+  reactHooksConfigs.flat["recommended-latest"],
   reactRefreshPlugin.configs.recommended,
 
   // React Plugin
