@@ -1,3 +1,9 @@
+## [3.2.2](https://github.com/Paratco/javascript/compare/3.2.1...3.2.2) (2025-10-29)
+
+### 🐛 Bug Fixes
+
+* react-hook config ([86cd1cf](https://github.com/Paratco/javascript/commit/86cd1cf44dd192128f6a995238806fffcb144775))
+
 ## [3.2.1](https://github.com/Paratco/javascript/compare/3.2.0...3.2.1) (2025-10-27)
 
 ### ⬆️ Dependency Updates
