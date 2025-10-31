@@ -67,7 +67,7 @@
     "@semantic-release/release-notes-generator": "^14.1.0",
     "@types/node": "^24.9.1",
     "conventional-changelog-conventionalcommits": "^9.1.0",
-    "eslint-plugin-oxlint": "1.23.0",
+    "eslint-plugin-oxlint": "1.25.0",
     "jiti": "^2.6.1",
     "oxlint": "1.23.0",
     "semantic-release": "^25.0.1",
