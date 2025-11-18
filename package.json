@@ -71,7 +71,7 @@
     "jiti": "^2.6.1",
     "oxlint": "1.23.0",
     "semantic-release": "^25.0.1",
-    "tsdown": "^0.15.10",
+    "tsdown": "^0.16.5",
     "typescript": "~5.9.3"
   },
   "packageManager": "yarn@4.10.3"
