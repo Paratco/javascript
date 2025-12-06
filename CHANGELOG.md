@@ -1,3 +1,17 @@
+## [3.3.0](https://github.com/Paratco/javascript/compare/3.2.2...3.3.0) (2025-12-06)
+
+### 🚀 Features
+
+* added commonjs exports ([1885e8a](https://github.com/Paratco/javascript/commit/1885e8a74df7e60deb01416c6ede50f818fadbb7))
+
+### ⬆️ Dependency Updates
+
+* **deps:** bump @eslint/js from 9.38.0 to 9.39.1 ([23df2fa](https://github.com/Paratco/javascript/commit/23df2fa4eb234185f019eed2cdaafb5350fa535d))
+* **deps:** bump @stylistic/eslint-plugin from 5.5.0 to 5.6.1 ([56479df](https://github.com/Paratco/javascript/commit/56479dfdfaaf18d2b9d28ca2a2822913adcfd4b8))
+* **deps:** bump eslint from 9.38.0 to 9.39.1 ([ae6fba4](https://github.com/Paratco/javascript/commit/ae6fba41f3e53331d3a1e9e9bae76b94bc33daa1))
+* **deps:** bump globals from 16.4.0 to 16.5.0 ([8312b03](https://github.com/Paratco/javascript/commit/8312b03445ab0e5cf08e2b5a2435e9fe83041eab))
+* **deps:** bump typescript-eslint from 8.46.2 to 8.48.1 ([da52623](https://github.com/Paratco/javascript/commit/da5262345483d888b7632e8b2a3f29e13a7f57eb))
+
 ## [3.2.2](https://github.com/Paratco/javascript/compare/3.2.1...3.2.2) (2025-10-29)
 
 ### 🐛 Bug Fixes
