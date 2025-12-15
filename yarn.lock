@@ -1027,13 +1027,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oxc-project/runtime@npm:^0.101.0":
-  version: 0.101.0
-  resolution: "@oxc-project/runtime@npm:0.101.0"
-  checksum: 10c0/86fd7bb37e94986e7a09bde07a16fa63cebeaada6bcb8963bc07087d54c107d1a128e1c4a5d27b9b593354c092b8976d7653b6700fbb0da0a2b925fb3de4b34c
-  languageName: node
-  linkType: hard
-
 "@oxc-project/types@npm:=0.101.0":
   version: 0.101.0
   resolution: "@oxc-project/types@npm:0.101.0"
@@ -2844,6 +2837,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"defu@npm:^6.1.4":
+  version: 6.1.4
+  resolution: "defu@npm:6.1.4"
+  checksum: 10c0/2d6cc366262dc0cb8096e429368e44052fdf43ed48e53ad84cc7c9407f890301aa5fcb80d0995abaaf842b3949f154d060be4160f7a46cb2bc2f7726c81526f5
+  languageName: node
+  linkType: hard
+
 "diff@npm:^8.0.2":
   version: 8.0.2
   resolution: "diff@npm:8.0.2"
@@ -4220,10 +4220,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"import-without-cache@npm:^0.2.2":
-  version: 0.2.2
-  resolution: "import-without-cache@npm:0.2.2"
-  checksum: 10c0/5c3c1ac477f0832aac6762cc64437c985384aae941f077c844dd5586c2dea88a0616592f48f42aa929f1987d2a7662f0927a053e967935c233adfb08cb3a0ad8
+"import-without-cache@npm:^0.2.3":
+  version: 0.2.3
+  resolution: "import-without-cache@npm:0.2.3"
+  checksum: 10c0/29de6707a626647f4fa037a4a730b5105f544cc7da7158ba9735863e6e514d6d48642abd2c0c53e8889cba803343399fc4d5a7a6ba89c30a329ae5b297911663
   languageName: node
   linkType: hard
 
@@ -6639,7 +6639,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rolldown-plugin-dts@npm:^0.18.2":
+"rolldown-plugin-dts@npm:^0.18.3":
   version: 0.18.3
   resolution: "rolldown-plugin-dts@npm:0.18.3"
   dependencies:
@@ -7503,26 +7503,27 @@ __metadata:
   linkType: hard
 
 "tsdown@npm:^0.17.0":
-  version: 0.17.0
-  resolution: "tsdown@npm:0.17.0"
+  version: 0.17.4
+  resolution: "tsdown@npm:0.17.4"
   dependencies:
     ansis: "npm:^4.2.0"
     cac: "npm:^6.7.14"
+    defu: "npm:^6.1.4"
     empathic: "npm:^2.0.0"
     hookable: "npm:^5.5.3"
-    import-without-cache: "npm:^0.2.2"
+    import-without-cache: "npm:^0.2.3"
     obug: "npm:^2.1.1"
     rolldown: "npm:1.0.0-beta.53"
-    rolldown-plugin-dts: "npm:^0.18.2"
+    rolldown-plugin-dts: "npm:^0.18.3"
     semver: "npm:^7.7.3"
     tinyexec: "npm:^1.0.2"
     tinyglobby: "npm:^0.2.15"
     tree-kill: "npm:^1.2.2"
-    unconfig-core: "npm:^7.4.1"
-    unrun: "npm:^0.2.16"
+    unconfig-core: "npm:^7.4.2"
+    unrun: "npm:^0.2.19"
   peerDependencies:
     "@arethetypeswrong/core": ^0.18.1
-    "@vitejs/devtools": ^0.0.0-alpha.18
+    "@vitejs/devtools": ^0.0.0-alpha.19
     publint: ^0.3.0
     typescript: ^5.0.0
     unplugin-lightningcss: ^0.4.0
@@ -7542,7 +7543,7 @@ __metadata:
       optional: true
   bin:
     tsdown: dist/run.mjs
-  checksum: 10c0/202591b8104cd368a2a58e6b0d9de970ce37d2d1c446c32333bb3cd2c4c666cc88ab682683190c666213b5770dcd82aea1797ac388d3c419f58424b495bbf3e7
+  checksum: 10c0/5e46307be5dcd95a6ad090dff5e270d090741e7b233b186388302492a6db3557e680d49e7067cf9887b2fe89766d602b4a6cbb2a66cb7a8158668610838ee3b9
   languageName: node
   linkType: hard
 
@@ -7719,7 +7720,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unconfig-core@npm:^7.4.1":
+"unconfig-core@npm:^7.4.2":
   version: 7.4.2
   resolution: "unconfig-core@npm:7.4.2"
   dependencies:
@@ -7881,11 +7882,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unrun@npm:^0.2.16":
-  version: 0.2.17
-  resolution: "unrun@npm:0.2.17"
+"unrun@npm:^0.2.19":
+  version: 0.2.19
+  resolution: "unrun@npm:0.2.19"
   dependencies:
-    "@oxc-project/runtime": "npm:^0.101.0"
     rolldown: "npm:1.0.0-beta.53"
   peerDependencies:
     synckit: ^0.11.11
@@ -7894,7 +7894,7 @@ __metadata:
       optional: true
   bin:
     unrun: dist/cli.mjs
-  checksum: 10c0/a0eb9cf446b85a76c887076193559d2678f623755d707c47a3b77c155cb2fa26429286b622cd8121012ac7b17b4f3c5497bd43bc105344b3e04fb4c44424ff53
+  checksum: 10c0/3dfc95fbadafcb92787994a12cc854701b4259f7b86c56965c0cd518d864cf29c67df8a80e3399c8dd19fcdd15a2323a0ad2ff616b0676180255206bd6e9cd03
   languageName: node
   linkType: hard
 
