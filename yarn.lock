@@ -833,17 +833,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/plugin-paginate-rest@npm:^13.0.0":
-  version: 13.2.1
-  resolution: "@octokit/plugin-paginate-rest@npm:13.2.1"
-  dependencies:
-    "@octokit/types": "npm:^15.0.1"
-  peerDependencies:
-    "@octokit/core": ">=6"
-  checksum: 10c0/16cd034ee6426f742514d0ca553a2c4355cd68c2eb9211030f3ec2538f4c833d587b3737bb720e34f98be8fae15acb07693d17314350cf067557abb4cb1598fb
-  languageName: node
-  linkType: hard
-
 "@octokit/plugin-paginate-rest@npm:^14.0.0":
   version: 14.0.0
   resolution: "@octokit/plugin-paginate-rest@npm:14.0.0"
@@ -902,7 +891,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/types@npm:^15.0.0, @octokit/types@npm:^15.0.1":
+"@octokit/types@npm:^15.0.0":
   version: 15.0.1
   resolution: "@octokit/types@npm:15.0.1"
   dependencies:
@@ -1369,35 +1358,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/github@npm:^12.0.0":
-  version: 12.0.0
-  resolution: "@semantic-release/github@npm:12.0.0"
-  dependencies:
-    "@octokit/core": "npm:^7.0.0"
-    "@octokit/plugin-paginate-rest": "npm:^13.0.0"
-    "@octokit/plugin-retry": "npm:^8.0.0"
-    "@octokit/plugin-throttling": "npm:^11.0.0"
-    "@semantic-release/error": "npm:^4.0.0"
-    aggregate-error: "npm:^5.0.0"
-    debug: "npm:^4.3.4"
-    dir-glob: "npm:^3.0.1"
-    http-proxy-agent: "npm:^7.0.0"
-    https-proxy-agent: "npm:^7.0.0"
-    issue-parser: "npm:^7.0.0"
-    lodash-es: "npm:^4.17.21"
-    mime: "npm:^4.0.0"
-    p-filter: "npm:^4.0.0"
-    tinyglobby: "npm:^0.2.14"
-    url-join: "npm:^5.0.0"
-  peerDependencies:
-    semantic-release: ">=24.1.0"
-  checksum: 10c0/088dfef57426bf0605bcf508e6adcd178957bcb933e7f1251db644f77efde2f9dd7a50ec58c570f130c72899540124001fadb0da6fde573af5597ac4aaa36a6f
-  languageName: node
-  linkType: hard
-
-"@semantic-release/github@npm:^12.0.2":
-  version: 12.0.2
-  resolution: "@semantic-release/github@npm:12.0.2"
+"@semantic-release/github@npm:^12.0.0, @semantic-release/github@npm:^12.0.2":
+  version: 12.0.3
+  resolution: "@semantic-release/github@npm:12.0.3"
   dependencies:
     "@octokit/core": "npm:^7.0.0"
     "@octokit/plugin-paginate-rest": "npm:^14.0.0"
@@ -1418,7 +1381,7 @@ __metadata:
     url-join: "npm:^5.0.0"
   peerDependencies:
     semantic-release: ">=24.1.0"
-  checksum: 10c0/aadb9f761d6041b455958627721e37aa7057d1f826f5115c3992f7bfc1830c06527cbff0b6b98d2c0505e8f96e60056e8aaa704c59287f8d9a01d62f6fdab796
+  checksum: 10c0/84242bc09e12e506d54fe68fc7bce369c59182674c7057181ece8158511526932f8587831ae5f336871988beff0573228a98ddb336c9fe4335c2454557443596
   languageName: node
   linkType: hard
 
