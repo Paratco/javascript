@@ -70,7 +70,7 @@
     "conventional-changelog-conventionalcommits": "^9.1.0",
     "eslint-plugin-oxlint": "1.31.0",
     "jiti": "^2.6.1",
-    "oxlint": "1.31.0",
+    "oxlint": "1.51.0",
     "semantic-release": "^25.0.2",
     "tsdown": "^0.17.0",
     "typescript": "~5.9.3"
