@@ -73,7 +73,7 @@
     "oxlint": "1.31.0",
     "semantic-release": "^25.0.2",
     "tsdown": "^0.17.0",
-    "typescript": "~5.9.3"
+    "typescript": "~6.0.3"
   },
   "packageManager": "yarn@4.12.0"
 }
