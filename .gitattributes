@@ -1,1 +1,5 @@
+# Set auto for all text files
 * text=auto eol=lf
+
+# Explicit rules for common file types
+*.bat   text eol=crlf
