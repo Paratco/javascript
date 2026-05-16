@@ -1,3 +1,9 @@
+## [3.3.1](https://github.com/Paratco/javascript/compare/3.3.0...3.3.1) (2026-05-16)
+
+### ⬆️ Dependency Updates
+
+* **deps:** bump deps to eslint < 10 ([d7d3bcc](https://github.com/Paratco/javascript/commit/d7d3bcc52bb6d3ddc2d019b2ffe124ad9e246b68))
+
 ## [3.3.0](https://github.com/Paratco/javascript/compare/3.2.2...3.3.0) (2025-12-06)
 
 ### 🚀 Features
