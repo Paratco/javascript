@@ -34,8 +34,8 @@
     "provenance": true
   },
   "scripts": {
-    "lint": "oxlint --max-warnings=0 && eslint --max-warnings=0",
-    "lint:fix": "oxlint --fix && eslint --fix",
+    "lint": "eslint --max-warnings=0",
+    "lint:fix": "eslint --fix",
     "lint:build": "migrate",
     "build:check": "tsc --noEmit",
     "build": "tsdown",

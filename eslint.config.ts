@@ -1,5 +1,4 @@
-// eslint-disable-next-line import-x/no-extraneous-dependencies
-import oxlint from "eslint-plugin-oxlint";
+// import oxlint from "eslint-plugin-oxlint";
 import { createConfig } from "./src";
 
 export default createConfig({
@@ -10,6 +9,7 @@ export default createConfig({
     project: "tsconfig.json",
     tsconfigRootDir: import.meta.dirname
   },
-  overrides: [...oxlint.configs["flat/all"]],
+
+  // overrides: [...oxlint.configs["flat/all"]],
   ignores: ["dist"]
 });
