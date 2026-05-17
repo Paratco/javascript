@@ -299,5 +299,10 @@ export default {
   // Enforce using concise optional chain expressions instead of chained logical ands, negated logical ors, or empty objects
   // https://typescript-eslint.io/rules/prefer-optional-chain
   // Note: This rule is in the recommended rules. But we remove it.
-  "@typescript-eslint/prefer-optional-chain": ["off"]
+  "@typescript-eslint/prefer-optional-chain": ["off"],
+
+  // Disallow type assertions that do not change the type of an expression.
+  // https://typescript-eslint.io/rules/no-unnecessary-type-assertion/
+  // Note: This rule is in the recommended rules. But we disable it.
+  "@typescript-eslint/no-unnecessary-type-assertion": ["off"]
 } as const satisfies Linter.RulesRecord;
