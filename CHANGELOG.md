@@ -1,3 +1,9 @@
+## [3.3.2](https://github.com/Paratco/javascript/compare/3.3.1...3.3.2) (2026-05-17)
+
+### 🐛 Bug Fixes
+
+* turn off no-unnecessary-type-assertion ([c597ff0](https://github.com/Paratco/javascript/commit/c597ff0b32944eddafd6a030c0189e3e84672b23))
+
 ## [3.3.1](https://github.com/Paratco/javascript/compare/3.3.0...3.3.1) (2026-05-16)
 
 ### ⬆️ Dependency Updates
