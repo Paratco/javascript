@@ -1,3 +1,9 @@
+## [3.4.0](https://github.com/Paratco/javascript/compare/3.3.2...3.4.0) (2026-05-17)
+
+### 🚀 Features
+
+* Add 'files' option to scope configs ([a3daef1](https://github.com/Paratco/javascript/commit/a3daef19428013b480b773d27e25c7757fd523b2))
+
 ## [3.3.2](https://github.com/Paratco/javascript/compare/3.3.1...3.3.2) (2026-05-17)
 
 ### 🐛 Bug Fixes
