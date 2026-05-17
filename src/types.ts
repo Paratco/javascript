@@ -9,6 +9,7 @@ export interface Options {
   platform: "node" | "react";
   style: "stylistic" | "prettier";
   useImport?: boolean;
+  files?: string[];
   overrides?: Linter.Config[];
   ignores?: string[];
   typescript?: TypescriptOptions;

@@ -1,4 +1,5 @@
 import type { Linter } from "eslint";
+import { defineConfig } from "eslint/config";
 import globals from "globals";
 import type { TSESLint } from "@typescript-eslint/utils";
 import reactPlugin from "eslint-plugin-react";
@@ -38,19 +39,21 @@ export function createConfig(opt: Options): Linter.Config[] {
   let config: Linter.Config[];
 
   if (opt.platform === "node") {
-    config = nodeConfig;
-
-    config.push({
-      files: ["**/*.{ts,js}"],
-      languageOptions: node(opt.typescript) as unknown as Linter.LanguageOptions
-    });
+    config = [
+      ...nodeConfig,
+      {
+        files: ["**/*.{ts,js}"],
+        languageOptions: node(opt.typescript) as unknown as Linter.LanguageOptions
+      }
+    ];
   } else {
-    config = reactConfig;
-
-    config.push({
-      files: ["**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}"],
-      languageOptions: react(opt.typescript) as unknown as Linter.LanguageOptions
-    });
+    config = [
+      ...reactConfig,
+      {
+        files: ["**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}"],
+        languageOptions: react(opt.typescript) as unknown as Linter.LanguageOptions
+      }
+    ];
   }
 
   if (opt.useImport === true) {
@@ -65,6 +68,10 @@ export function createConfig(opt: Options): Linter.Config[] {
 
   if (opt.ignores !== undefined) {
     config.push({ ignores: opt.ignores });
+  }
+
+  if (opt.files !== undefined && opt.files.length > 0) {
+    return defineConfig({ files: opt.files, extends: config });
   }
 
   return config;

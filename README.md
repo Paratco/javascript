@@ -1,88 +1,65 @@
 # `@paratco/eslint-config`
-
 Paratco ESLint configs for JavaScript and TypeScript projects.
-
 - TypeScript
 - React (optional)
 - Node.js
 - Import plugin (optional)
 - Stylistic or Prettier formatting
-
 ## Installation
-
-
 NPM:
 ```bash
 # prettier is optional, just use it if you want to use prettier formatting
 npm install --save-dev @paratco/eslint-config eslint prettier
 ```
-
 Yarn:
 ```bash
 # prettier is optional, just use it if you want to use prettier formatting
 yarn add -D @paratco/eslint-config eslint prettier
 ```
-
 ## Usage (ESLint Flat Config)
-
 Create an `eslint.config.{js,mjs,ts}` file in your project root:
-
 ```javascript
 import { createConfig } from "@paratco/eslint-config";
-
 export default createConfig({
   // Required: Specify the platform
   platform: "node", // or "react"
-
   // Required: Choose your formatting style
   style: "prettier", // or "stylistic"
-
   // Optional: Enable import plugin rules
   useImport: true,
-
   // Optional: TypeScript configuration
   typescript: {
     tsconfigRootDir: import.meta.dirname,
     project: "./tsconfig.json"
   },
-
   // Optional: Add custom overrides
   overrides: [
     // Your custom ESLint configurations
   ],
-
   // Optional: Specify patterns to ignore
   ignores: ["dist/**", "node_modules/**"]
 });
 ```
-
 ## Configuration Options
-
 The `createConfig` function accepts an options object with the following properties:
-
 | Option | Type | Required | Default | Description |
 |--------|------|----------|---------|-------------|
 | `platform` | `"node" \| "react"` | Yes | - | Specifies the platform for the ESLint configuration |
 | `style` | `"stylistic" \| "prettier"` | Yes | - | Specifies the style formatter to use |
 | `useImport` | `boolean` | No | `false` | Enable import plugin rules |
+| `files` | `string[]` | No | `undefined` | Scope all rules to these file globs only |
 | `typescript` | `TypescriptOptions` | No | `undefined` | TypeScript configuration options |
 | `overrides` | `Linter.Config[]` | No | `undefined` | Additional ESLint configurations to override defaults |
 | `ignores` | `string[]` | No | `undefined` | Patterns to ignore |
-
 ### TypeScript Options
-
 | Option | Type | Required | Default | Description |
 |--------|------|----------|---------|-------------|
 | `tsconfigRootDir` | `string` | No | `undefined` | The root directory for TypeScript configuration |
 | `project` | `string \| string[]` | No | `undefined` | Path to tsconfig.json file(s) |
-
 ## Examples
-
 ### Node.js Configuration
-
 ```javascript
 import { createConfig } from "@paratco/eslint-config";
-
 export default createConfig({
   platform: "node",
   style: "prettier",
@@ -92,12 +69,9 @@ export default createConfig({
   }
 });
 ```
-
 ### React Configuration
-
 ```javascript
 import { createConfig } from "@paratco/eslint-config";
-
 export default createConfig({
   platform: "react",
   style: "stylistic",
@@ -108,50 +82,69 @@ export default createConfig({
   }
 });
 ```
-
 ### JavaScript-only Configuration
-
 ```javascript
 import { createConfig } from "@paratco/eslint-config";
-
 export default createConfig({
   platform: "node",
   style: "prettier"
 });
 ```
-
+### Scoping Rules to Specific Directories
+Use the `files` option to restrict all rules to a specific set of file globs. This is useful when a single ESLint config covers multiple platforms (e.g. an Electron app with a renderer and a main process each targeting a different `tsconfig.json`), or when working in a monorepo where different sub-trees have different configs.
+When `files` is provided, `createConfig` internally wraps the returned configs with [`eslint.defineConfig()`](https://eslint.org/docs/latest/use/configure/configuration-files#configuration-file) so that all plugin registrations and rules are correctly scoped — no extra wrapper is needed in your config file.
+```javascript
+import { createConfig } from "@paratco/eslint-config";
+export default [
+  // Renderer process — React + browser globals
+  ...createConfig({
+    files: ["./src/**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}"],
+    platform: "react",
+    style: "stylistic",
+    useImport: true,
+    typescript: {
+      tsconfigRootDir: import.meta.dirname,
+      project: "./tsconfig.app.json"
+    }
+  }),
+  // Main process — Node.js globals
+  ...createConfig({
+    files: ["./electron/**/*.{js,mjs,cjs,ts}"],
+    platform: "node",
+    style: "stylistic",
+    useImport: true,
+    typescript: {
+      tsconfigRootDir: import.meta.dirname,
+      project: "./tsconfig.electron.json"
+    }
+  }),
+  {
+    ignores: ["dist", "dist-electron", ".vite"]
+  }
+];
+```
+> **Note:** When `files` is used and multiple `createConfig` calls are combined, spread each result (`...createConfig(...)`) into the top-level array instead of returning a single `createConfig` call directly.
 ## Using oxlint alongside ESLint
-
 [oxlint](https://oxc-project.github.io/) is a fast JavaScript/TypeScript linter written in Rust that can be used alongside ESLint to improve performance and catch additional issues. This package supports using both linters together.
-
 ### Installation
-
 Install oxlint alongside ESLint:
-
 NPM:
 ```bash
 npm install --save-dev --save-exact oxlint@1.7.0 eslint-plugin-oxlint@1.7.0
 ```
-
 Yarn:
 ```bash
 yarn add -D -E oxlint@1.7.0 eslint-plugin-oxlint@1.7.0
 ```
-
 note: Ensure you have the latest and exact version of oxlint and eslint-plugin-oxlint installed.
-
 ### Configuration
-
 1. Create an `.oxlintrc.json` file with @oxlint/migrate:
-
 ```bash
 # version match with oxlint installed before
 npx @oxlint/migrate@1.7.0
 ```
 This will generate or update your `.oxlintrc.json` file based on your ESLint configuration. The tool analyzes your ESLint config and converts compatible rules to their oxlint equivalents.
-
 2. Update your `package.json` scripts to run both linters (run oxlint first for performance):
-
 ```json
 {
   "scripts": {
@@ -160,53 +153,39 @@ This will generate or update your `.oxlintrc.json` file based on your ESLint con
   }
 }
 ```
-
 3. integrate oxlint with ESLint by adding the ESLint plugin to your configuration:
-
 ```javascript
 import { createConfig } from "@paratco/eslint-config";
 import oxlintPlugin from "eslint-plugin-oxlint";
-
 export default createConfig({
   platform: "node", // or "react"
   style: "prettier", // or "stylistic"
-
   // Add oxlint plugin as the LAST item in your overrides
   // This ensures ESLint rules that are handled by oxlint are turned off
   overrides: [
     // Your other overrides go here
-    
     // eslint-plugin-oxlint must be the last config
     ...oxlintPlugin.configs["flat/all"]
   ]
 });
 ```
-
 ### Running Linters
-
 Run both linters with a single command:
-
 ```bash
 npm run lint
 # or
 yarn lint
 ```
-
 Fix issues automatically when possible:
-
 ```bash
 npm run lint:fix
 # or
 yarn lint:fix
 ```
-
 ### Benefits of Using Both Linters
-
 - **Performance**: oxlint is significantly faster than ESLint, especially on large codebases
 - **Complementary Rules**: Each linter has unique rules that can catch different issues
 - **Gradual Migration**: You can gradually migrate from ESLint to oxlint or use both permanently
 - **Modern JavaScript Support**: oxlint has excellent support for modern JavaScript and TypeScript features
-
 ## License
-
 Licensed under [MIT License](./LICENSE)
