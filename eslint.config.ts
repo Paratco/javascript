@@ -1,4 +1,3 @@
-// import oxlint from "eslint-plugin-oxlint";
 import { createConfig } from "./src";
 
 export default createConfig({
@@ -10,6 +9,5 @@ export default createConfig({
     tsconfigRootDir: import.meta.dirname
   },
 
-  // overrides: [...oxlint.configs["flat/all"]],
   ignores: ["dist"]
 });

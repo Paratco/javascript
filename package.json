@@ -36,7 +36,6 @@
   "scripts": {
     "lint": "bunx --bun eslint --max-warnings=0 --cache",
     "lint:fix": "bunx --bun eslint --cache --fix",
-    "lint:build": "migrate",
     "build:check": "tsc --noEmit",
     "build": "tsdown",
     "release": "semantic-release",
@@ -59,7 +58,6 @@
     "typescript-eslint": "8.59.3"
   },
   "devDependencies": {
-    "@oxlint/migrate": "1.65.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.1",
     "@semantic-release/git": "^10.0.1",
@@ -68,8 +66,6 @@
     "@semantic-release/release-notes-generator": "^14.1.1",
     "@types/node": "^25.8.0",
     "conventional-changelog-conventionalcommits": "^9.3.1",
-    "eslint-plugin-oxlint": "1.65.0",
-    "oxlint": "1.65.0",
     "semantic-release": "^25.0.3",
     "tsdown": "^0.22.0",
     "typescript": "~6.0.3"
