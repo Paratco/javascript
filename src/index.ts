@@ -2,7 +2,6 @@ import type { Linter } from "eslint";
 import { defineConfig } from "eslint/config";
 import globals from "globals";
 import type { TSESLint } from "@typescript-eslint/utils";
-import reactPlugin from "eslint-plugin-react";
 import nodeConfig from "./configs/node";
 import reactConfig from "./configs/react";
 import importConfig from "./configs/import";
@@ -23,12 +22,12 @@ function node(typescript?: TypescriptOptions): TSESLint.FlatConfig.Config["langu
 
 function react(typescript?: TypescriptOptions): TSESLint.FlatConfig.Config["languageOptions"] {
   return {
-    ...reactPlugin.configs.flat.recommended.languageOptions,
     globals: {
       ...globals.serviceworker,
       ...globals.browser
     },
     parserOptions: {
+      ecmaFeatures: { jsx: true },
       tsconfigRootDir: typescript?.tsconfigRootDir,
       project: typescript?.project
     }
