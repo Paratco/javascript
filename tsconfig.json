@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es2024",
+    "target": "esnext",
     "module": "preserve",
     "moduleResolution": "bundler",
     "outDir": "dist",
@@ -15,11 +15,10 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "sourceMap": true,
-    "types": ["node"]
+    "types": ["node", "bun"]
   },
   "include": [
     "src",
-    "eslint.config.ts",
-    "tsdown.config.ts"
+    "eslint.config.ts"
   ]
 }
