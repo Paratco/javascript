@@ -108,5 +108,9 @@ export default {
 
   // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-top-level-assignment-in-function.md
   // Disallow assigning to top-level variables from inside functions.
-  "unicorn/no-top-level-assignment-in-function": ["off"]
+  "unicorn/no-top-level-assignment-in-function": ["off"],
+
+  // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-unsafe-string-replacement.md
+  // Disallow non-literal replacement values in String#replace() and String#replaceAll().
+  "unicorn/no-unsafe-string-replacement": ["warn"]
 } as const satisfies Linter.RulesRecord;
