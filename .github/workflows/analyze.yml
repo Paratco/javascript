@@ -19,22 +19,19 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: 22
-          check-latest: true
-
-      - name: Enable Yarn
-        run: corepack enable
+          bun-version: latest
 
       - name: Install dependencies
-        run: yarn install
+        run: bun install --frozen-lockfile
 
       - name: Lint
-        run: yarn lint
+        run: bun run lint
 
       - name: Typescript Type Check
-        run: yarn build:check
+        run: bun run build:check
 
       - name: Check Build Production
-        run: yarn build
+        run: bun run build

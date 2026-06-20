@@ -49,15 +49,17 @@ jobs:
           check-latest: true
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Enable Yarn
-        run: corepack enable
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
 
       - name: Install dependencies
-        run: yarn install
+        run: bun install --frozen-lockfile
 
       - name: Semantic Release (Debug Dry Run)
         if: ${{ github.event.inputs.debug == 'true' }}
-        run: yarn release-dry-debug
+        run: bun run release-dry-debug
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
           GIT_AUTHOR_NAME: ${{ steps.app-token.outputs.app-slug }}[bot]
@@ -67,11 +69,11 @@ jobs:
 
       - name: Build
         if: ${{ github.event.inputs.debug != 'true' }}
-        run: yarn build
+        run: bun run build
 
       - name: Semantic Release
         if: ${{ github.event.inputs.debug != 'true' }}
-        run: yarn release
+        run: bun run release
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
           GIT_AUTHOR_NAME: ${{ steps.app-token.outputs.app-slug }}[bot]

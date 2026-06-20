@@ -1,11 +1,12 @@
 // Plugins
-import reactPlugin from "eslint-plugin-react";
+import eslintReact from "@eslint-react/eslint-plugin";
 import { configs as reactHooksConfigs } from "eslint-plugin-react-hooks";
 import reactRefreshPlugin from "eslint-plugin-react-refresh";
 
 // Custom Rules
 import type { Linter } from "eslint";
 import reactRules from "../rules/react";
+import reactKitRules from "../rules/react_kit";
 import baseConfig from "./base";
 
 export default [
@@ -16,15 +17,13 @@ export default [
   // React Plugin
   {
     files: ["**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}"],
-    ...reactPlugin.configs.flat.recommended,
+    ...eslintReact.configs["recommended-typescript"],
 
-    settings: {
-      react: {
-        version: "detect"
-      }
-    },
     rules: {
       ...reactRules
     }
-  }
+  },
+
+  // Custom React Kit Rules (self-contained flat config: plugin + rules)
+  reactKitRules
 ] as Linter.Config[];
