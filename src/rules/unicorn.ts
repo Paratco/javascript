@@ -76,7 +76,7 @@ export default {
 
   // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-uint8array-base64.md
   // Prefer `Uint8Array#toBase64()` and `Uint8Array.fromBase64()` over `atob()`, `btoa()`, and `Buffer` base64 conversions.
-  "unicorn/prefer-uint8array-base64": ["off"],
+  "unicorn/prefer-uint8array-base64": ["error"],
 
   // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-iterator-to-array.md
   // Prefer `Iterator#toArray()` over temporary arrays from iterator spreads.
@@ -112,5 +112,13 @@ export default {
 
   // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-unsafe-string-replacement.md
   // Disallow non-literal replacement values in String#replace() and String#replaceAll().
-  "unicorn/no-unsafe-string-replacement": ["warn"]
+  "unicorn/no-unsafe-string-replacement": ["warn"],
+
+  // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/name-replacements.md
+  // Enforce replacements for variable, property, and filenames.
+  "unicorn/name-replacements": "off",
+
+  // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-nonstandard-builtin-properties.md
+  // Disallow non-standard properties on built-in objects.
+  "unicorn/no-nonstandard-builtin-properties": ["off"]
 } as const satisfies Linter.RulesRecord;
