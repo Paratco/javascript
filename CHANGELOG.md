@@ -1,3 +1,46 @@
+## [4.0.0](https://github.com/Paratco/javascript/compare/3.4.0...4.0.0) (2026-06-20)
+
+### ⚠ BREAKING CHANGES
+
+* requires ESLint 10. The enabled rule set changes with the
+new major versions of ESLint, typescript-eslint, and eslint-plugin-unicorn,
+which can surface new lint errors in consuming projects.
+
+Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+* the React rule set is now provided by @eslint-react. Rule
+IDs change from `react/*` to `@eslint-react/*` (and `@eslint-react/kit/*`),
+so any consumer overrides targeting `react/*` rule names must be updated.
+
+Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+* the CommonJS entry is removed. `exports` no longer has a
+`require` condition and only ships `./dist/index.js` (ESM) + types, so
+`require("@paratco/eslint-config")` no longer works — consumers must use
+ESM `import`. (The CJS build was already non-functional since @eslint-react
+is ESM-only.)
+
+Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+* oxlint is no longer wired up or supported by this config.
+Projects relying on the bundled oxlint integration must configure oxlint
+independently.
+
+Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+* development now requires Bun. yarn.lock and .yarnrc.yml
+are removed in favor of bun.lock; CI installs and runs scripts via Bun,
+and lint runs through `bunx --bun eslint`.
+
+Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+
+### 🚀 Features
+
+* migrate package manager from yarn to bun ([2520827](https://github.com/Paratco/javascript/commit/252082780f13eca7ce5c12f772bb2cf279f10062))
+* remove oxlint/oxc integration ([0d6e92b](https://github.com/Paratco/javascript/commit/0d6e92b3e659088e79d0ac5d5786cefa48f9a37e))
+* replace eslint-plugin-react with [@eslint-react](https://github.com/eslint-react) ([8a29249](https://github.com/Paratco/javascript/commit/8a29249ce65f29f1b109ec0bf14bfb4b7cec2d73))
+* upgrade to eslint 10 toolchain and curate new unicorn rules ([38b5dad](https://github.com/Paratco/javascript/commit/38b5dadc2ca78f3750242099b53c722ea363535a))
+
+### 📦 Build System
+
+* replace tsdown with bun build and publish ESM-only ([491fba9](https://github.com/Paratco/javascript/commit/491fba9b0f93ebd0ab7b8a97b790d4ca2ba68b6e))
+
 ## [3.4.0](https://github.com/Paratco/javascript/compare/3.3.2...3.4.0) (2026-05-17)
 
 ### 🚀 Features
