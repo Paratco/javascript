@@ -62,7 +62,7 @@
     "eslint-plugin-unicorn": "68.0.0",
     "eslint-plugin-unused-imports": "4.4.1",
     "globals": "17.6.0",
-    "typescript-eslint": "8.61.1"
+    "typescript-eslint": "8.62.0"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
