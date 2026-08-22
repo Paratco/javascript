@@ -7,6 +7,14 @@ import { build, PLATFORMS, STYLES } from "./support";
  * `createConfig` is heavily cast, so `tsc` cannot see whether a rule id exists
  * or whether its options match the plugin's schema. ESLint validates both when
  * a flat config is first used, and throws — so "does not throw" is the check.
+ *
+ * The sample paths below deliberately need not exist, and need not be inside
+ * the tsconfig: config validation happens *before* parsing, and a file the
+ * TSConfig does not include comes back as a fatal *message* ("Parsing error:
+ * ...does not include this file"), never an exception. The negative controls at
+ * the bottom of this file prove validation still fires on exactly these paths.
+ *
+ * Rules actually executing is covered separately, in type-aware.test.ts.
  */
 function verifyWith(config: LinterTypes.Config[], filePath: string): void {
   const linter = new Linter({ configType: "flat" });
