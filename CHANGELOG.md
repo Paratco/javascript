@@ -1,3 +1,33 @@
+## [5.0.0](https://github.com/Paratco/javascript/compare/4.0.0...5.0.0) (2026-08-22)
+
+### ⚠ BREAKING CHANGES
+
+* 25 new error-level unicorn rules are now enforced.
+Consumers may see new errors on existing code. Several of the kept rules
+prefer recent JS APIs (Object.groupBy, Set methods, iterator helpers,
+Uint8Array base64) — projects targeting older runtimes need a polyfill.
+
+Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+### 🚀 Features
+
+* bump eslint-plugin-unicorn from 68.0.0 to 73.0.0 ([1a9bd2d](https://github.com/Paratco/javascript/commit/1a9bd2d2af987da74a4dbe6abc005f306d730800))
+
+### 🐛 Bug Fixes
+
+* apply parserOptions to every supported file extension ([6769c57](https://github.com/Paratco/javascript/commit/6769c5766188ff530bd6738ebaac3b7689f46a09))
+* **stylistic:** drop conflicting field-to-field rule in lines-between-class-members ([32b69b5](https://github.com/Paratco/javascript/commit/32b69b59c932b00b6fcc11f164651250c748595b))
+
+### ⬆️ Dependency Updates
+
+* **deps:** bump @eslint-react/eslint-plugin from ^5.9.1 to ^5.18.6 ([1f61cdb](https://github.com/Paratco/javascript/commit/1f61cdb3cb94ac8c2277c920cac9009b5a2662ee))
+* **deps:** bump @eslint-react/kit and @typescript-eslint/types ([d6ec4e0](https://github.com/Paratco/javascript/commit/d6ec4e0b9f6f68c2fd10ec6d2cf8909d2f416768))
+* **deps:** bump eslint from 10.5.0 to 10.9.0 ([6e63d7a](https://github.com/Paratco/javascript/commit/6e63d7a54b96c5cb4224d33e0fb26e864140e313))
+* **deps:** bump eslint-plugin-import-x from 4.16.2 to 4.17.1 ([8d2cb71](https://github.com/Paratco/javascript/commit/8d2cb711f1be9612a052e37d64a17c240d300ea6))
+* **deps:** bump eslint-plugin-react-refresh from 0.5.3 to 0.5.4 ([92ce082](https://github.com/Paratco/javascript/commit/92ce0826447b0e249aad1fa269e65fbf63176554))
+* **deps:** bump globals from 17.6.0 to 17.11.0 ([b356d1e](https://github.com/Paratco/javascript/commit/b356d1e489432972ab78398f9868cf019ba164f8))
+* **deps:** bump typescript-eslint from 8.61.1 to 8.67.0 ([68b7978](https://github.com/Paratco/javascript/commit/68b797855f16123b666a3572741f5ecab8fe34d6))
+
 ## [4.0.0](https://github.com/Paratco/javascript/compare/3.4.0...4.0.0) (2026-06-20)
 
 ### ⚠ BREAKING CHANGES
