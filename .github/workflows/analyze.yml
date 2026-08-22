@@ -31,5 +31,8 @@ jobs:
       - name: Typescript Type Check
         run: bun run build:check
 
+      - name: Test
+        run: bun test
+
       - name: Check Build Production
         run: bun run build

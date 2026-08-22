@@ -16,16 +16,19 @@ bun run lint                # eslint --max-warnings=0 (dogfoods this config via 
 bun run lint:fix            # eslint --fix
 bun run build:check         # tsc --noEmit — the type-check gate
 bun run build               # clean + build:js (bun) + build:types (tsc) -> dist/
+bun test                    # tests/*.test.ts (no package.json script — CI calls `bun test` directly)
 ```
 
-There is **no test suite / test runner** in this repo. Correctness is verified by `build:check`, `lint`, and `build`, plus ad-hoc runtime checks: build, then load the output and exercise it, e.g.
+### Tests
 
-```bash
-bun run build
-bun -e "import('./dist/index.js').then(m => console.log(m.createConfig({platform:'react',style:'stylistic',useImport:true}).length))"
-```
+`bun test` (Bun's built-in runner, no extra dependency) runs `tests/*.test.ts`. There is deliberately **no `test` script in `package.json`** — the workflows call `bun test` directly. `tsconfig.json` includes `tests`, so `build:check` and `lint` cover them too; `tsconfig.build.json` does not, so they never reach `dist/`.
 
-To validate a generated config actually loads (catches bad rule names / option schemas / structural errors), run it through ESLint's `Linter` with `configType: "flat"` against a sample file — this is the most reliable way to catch config bugs that `tsc` won't, because the result is heavily cast (`as unknown as ...`).
+- **`tests/config-validity.test.ts`** — builds every option combination and runs it through ESLint's `Linter` with `configType: "flat"`. ESLint validates rule ids and option schemas on first use and *throws*, so "does not throw" is the assertion. This is the main defence against config bugs `tsc` cannot see, because the config is heavily cast (`as unknown as ...`). The file ends with negative controls (unknown rule id, bad rule option, invalid severity) that assert ESLint really does throw — without them the suite would pass on any config at all.
+- **`tests/rule-snapshot.test.ts`** — snapshots the effective *enabled* rule set (`id: severity`, off-rules excluded as noise) per platform/style. A plugin bump that silently enables, disables, or re-severities rules for consumers shows up here as a reviewable diff. A failure is not automatically a bug: read the diff, then accept it with `bun test --update-snapshots`.
+- **`tests/create-config.test.ts`** — option behaviour: `useImport` toggling, `files` scoping, `overrides` precedence, `ignores` placement, platform-specific plugins.
+- **`tests/support.ts`** — shared helpers. `resolveRules()` asks ESLint itself (`calculateConfigForFile`) to resolve a config for a path rather than merging `rules` blocks by hand, so `files` scoping and block order are handled by the real implementation. It returns `{}` when the path matches no block.
+
+Type-aware rules cannot be exercised through `Linter` — there is no TS program, so it reports *"that TSConfig does not include this file"*. Tests that need rules to actually **fire** (rather than just validate) require fixture files on disk under their own tsconfig, driven through the `ESLint` class. That layer does not exist yet.
 
 ## Architecture
 
