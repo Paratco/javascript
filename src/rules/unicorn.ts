@@ -76,6 +76,8 @@ export default {
 
   // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-uint8array-base64.md
   // Prefer `Uint8Array#toBase64()` and `Uint8Array.fromBase64()` over `atob()`, `btoa()`, and `Buffer` base64 conversions.
+  // Kept on deliberately: upstream demoted this to off in v73, but the native path is faster and the
+  // gap is polyfillable.
   "unicorn/prefer-uint8array-base64": ["error"],
 
   // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-iterator-to-array.md
@@ -120,5 +122,26 @@ export default {
 
   // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-nonstandard-builtin-properties.md
   // Disallow non-standard properties on built-in objects.
-  "unicorn/no-nonstandard-builtin-properties": ["off"]
+  "unicorn/no-nonstandard-builtin-properties": ["off"],
+
+  // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/single-line-block-comment-style.md
+  // Enforce a consistent style for single-line block comments.
+  // Off: the default `multiline` style rewrites `/* x */` and one-line `/** x */` JSDoc into
+  // multi-line comments. We take no stance on comment shape (see @stylistic/multiline-comment-style).
+  "unicorn/single-line-block-comment-style": ["off"],
+
+  // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-promise-try.md
+  // Prefer `Promise.try()` over promise-wrapping boilerplate.
+  // Off: flags everyday `Promise.resolve().then(() => f())` and `Promise.try()` is too new to require.
+  "unicorn/prefer-promise-try": ["off"],
+
+  // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-then-catch.md
+  // Prefer `.then().catch()` over `.then(…, …)` for error handling.
+  // Off: not equivalent. `.then(a, b)` does not catch errors thrown by `a`, `.then(a).catch(b)` does.
+  "unicorn/prefer-then-catch": ["off"],
+
+  // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-dom-node-html-methods.md
+  // Prefer `.getHTML()` and `.setHTML()` over `.innerHTML`.
+  // Off: fires on plain `.innerHTML` reads, and `.setHTML()` (Sanitizer API) is not polyfillable.
+  "unicorn/prefer-dom-node-html-methods": ["off"]
 } as const satisfies Linter.RulesRecord;

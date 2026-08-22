@@ -238,11 +238,9 @@ export default {
     "warn",
     {
       enforce: [
-        {
-          blankLine: "never",
-          prev: "field",
-          next: "field"
-        },
+        // NOTE: a "never" pair (e.g. field -> field) conflicts with `@stylistic/lines-around-comment`:
+        // a leading comment counts as part of the next member, so the blank line that rule
+        // requires before the comment is read as padding here, producing circular fixes.
         {
           blankLine: "always",
           prev: "*",
