@@ -9,8 +9,6 @@ on:
 jobs:
   analyze:
     name: Analyze Source Code
-    env:
-      NPM_TOKEN: ${{ secrets.NPM_READ_TOKEN }}
 
     runs-on:
       - ubuntu-latest
