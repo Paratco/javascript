@@ -6,6 +6,7 @@ import unusedImports from "eslint-plugin-unused-imports";
 import type { Linter } from "eslint";
 import type { TypeScriptResolverOptions } from "eslint-import-resolver-typescript";
 import importXRules from "../rules/import";
+import { ALL_FILES } from "../globs";
 import type { TypescriptOptions } from "../types";
 
 export default function importConfig(typescript?: TypescriptOptions): Linter.Config[] {
@@ -21,7 +22,7 @@ export default function importConfig(typescript?: TypescriptOptions): Linter.Con
 
     // ESLint Plugin Import
     {
-      files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
+      files: ALL_FILES,
       plugins: {
         "unused-imports": unusedImports
       },

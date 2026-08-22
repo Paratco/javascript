@@ -8,6 +8,7 @@ import importConfig from "./configs/import";
 import prettierFormatter from "./configs/prettierFormatter";
 import stylisticFormatter from "./configs/stylisticFormatter";
 import type { Options, TypescriptOptions } from "./types";
+import { ALL_FILES } from "./globs";
 
 function node(typescript?: TypescriptOptions): TSESLint.FlatConfig.Config["languageOptions"] {
   return {
@@ -41,7 +42,7 @@ export function createConfig(opt: Options): Linter.Config[] {
     config = [
       ...nodeConfig,
       {
-        files: ["**/*.{ts,js}"],
+        files: ALL_FILES,
         languageOptions: node(opt.typescript) as unknown as Linter.LanguageOptions
       }
     ];
@@ -49,7 +50,7 @@ export function createConfig(opt: Options): Linter.Config[] {
     config = [
       ...reactConfig,
       {
-        files: ["**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}"],
+        files: ALL_FILES,
         languageOptions: react(opt.typescript) as unknown as Linter.LanguageOptions
       }
     ];

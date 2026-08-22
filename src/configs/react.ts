@@ -6,6 +6,7 @@ import reactRefreshPlugin from "eslint-plugin-react-refresh";
 // Custom Rules
 import type { Linter } from "eslint";
 import reactRules from "../rules/react";
+import { ALL_FILES } from "../globs";
 import reactKitRules from "../rules/react_kit";
 import baseConfig from "./base";
 
@@ -16,7 +17,7 @@ export default [
 
   // React Plugin
   {
-    files: ["**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}"],
+    files: ALL_FILES,
     ...eslintReact.configs["recommended-typescript"],
 
     rules: {

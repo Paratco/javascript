@@ -7,6 +7,7 @@ import type { Linter } from "eslint";
 import javascriptRules from "../rules/javascript";
 import typescriptRules from "../rules/typescript";
 import unicornRules from "../rules/unicorn";
+import { ALL_FILES, TS_FILES } from "../globs";
 
 export default [
   eslintJS.configs.recommended,
@@ -16,19 +17,19 @@ export default [
 
   // JavaScript Rules
   {
-    files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
+    files: ALL_FILES,
     rules: javascriptRules
   },
 
   // TypeScript Rules
   {
-    files: ["**/*.{ts,tsx}"],
+    files: TS_FILES,
     rules: typescriptRules
   },
 
   // Unicorn Rules
   {
-    files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
+    files: ALL_FILES,
     rules: unicornRules
   }
 ] as Linter.Config[];

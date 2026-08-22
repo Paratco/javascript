@@ -1,6 +1,7 @@
 import stylistic from "@stylistic/eslint-plugin";
 import type { Linter } from "eslint";
 import stylisticRules from "../rules/stylistic";
+import { ALL_FILES } from "../globs";
 
 export default [
   // Stylistic Configs
@@ -18,7 +19,7 @@ export default [
 
   // Stylistic Rules
   {
-    files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
+    files: ALL_FILES,
     languageOptions: {
       parserOptions: {
         ecmaFeatures: {
