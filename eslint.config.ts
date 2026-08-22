@@ -9,5 +9,6 @@ export default createConfig({
     tsconfigRootDir: import.meta.dirname
   },
 
-  ignores: ["dist"]
+  // tests/fixtures holds files that violate rules on purpose
+  ignores: ["dist", "tests/fixtures"]
 });
