@@ -1,3 +1,9 @@
+## [5.0.1](https://github.com/Paratco/javascript/compare/5.0.0...5.0.1) (2026-09-26)
+
+### 🐛 Bug Fixes
+
+* **release:** also publish to GitHub Packages ([#708](https://github.com/Paratco/javascript/issues/708)) ([c5ce6ff](https://github.com/Paratco/javascript/commit/c5ce6ffb7955407b4de010fe6b28df32e01b8022))
+
 ## [5.0.0](https://github.com/Paratco/javascript/compare/4.0.0...5.0.0) (2026-08-22)
 
 ### ⚠ BREAKING CHANGES
